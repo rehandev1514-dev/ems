@@ -33,7 +33,7 @@ export function Sidebar() {
   const items = nav.filter((n) => n.roles.includes(user.role));
 
   return (
-    <aside className="hidden md:flex w-64 min-w-[16rem] h-screen sticky top-0 shrink-0 flex-col border-r border-border bg-sidebar/80 backdrop-blur-xl">
+    <aside className="hidden md:flex w-64 min-w-[16rem] shrink-0 flex-col border-r border-border bg-sidebar/80 backdrop-blur-xl">
       <div className="flex items-center gap-2.5 px-5 h-16 border-b border-sidebar-border">
         <div className="size-9 rounded-lg gradient-primary flex items-center justify-center shadow-glow">
           <Hexagon className="size-5 text-primary-foreground" strokeWidth={2.5} />
