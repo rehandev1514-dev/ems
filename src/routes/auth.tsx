@@ -118,6 +118,13 @@ function AuthPage() {
             <Button type="submit" className="w-full gradient-primary text-primary-foreground hover:opacity-95 shadow-glow h-10" disabled={loading}>
               {loading ? <Loader2 className="size-4 animate-spin" /> : "Sign in"}
             </Button>
+
+            <div className="text-center text-sm text-muted-foreground mt-4">
+              Don't have an account?{" "}
+              <Link to="/auth/signup" className="text-primary hover:underline font-medium">
+                Register here
+              </Link>
+            </div>
           </form>
 
           <div className="mt-6 rounded-lg border border-dashed border-border p-3 text-xs text-muted-foreground space-y-1">

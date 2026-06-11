@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { useAuth } from "@/lib/auth-store";
 import { useEffect } from "react";
 import { useNavigate } from "@tanstack/react-router";
+import { Loader2 } from "lucide-react";
 
 export const Route = createFileRoute("/_app")({
   // SSR-safe: don't read localStorage in beforeLoad. Gate in component instead.
@@ -13,8 +14,28 @@ export const Route = createFileRoute("/_app")({
 
 function AppLayout() {
   const user = useAuth((s) => s.user);
+  const loading = useAuth((s) => s.loading);
+  const checkSession = useAuth((s) => s.checkSession);
   const navigate = useNavigate();
-  useEffect(() => { if (!user) navigate({ to: "/auth" }); }, [user, navigate]);
+
+  useEffect(() => {
+    checkSession();
+  }, [checkSession]);
+
+  useEffect(() => {
+    if (!loading && !user) {
+      navigate({ to: "/auth" });
+    }
+  }, [user, loading, navigate]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <Loader2 className="size-8 animate-spin text-primary" />
+      </div>
+    );
+  }
+
   if (!user) return null;
 
   return (
