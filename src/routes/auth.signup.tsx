@@ -37,9 +37,14 @@ function SignupPage() {
     }
     setLoading(true);
     try {
-      await signup(fullName, email, password, departmentId, designation, role);
-      toast.success(`Welcome, ${fullName.split(" ")[0]}! Your account has been registered.`);
-      navigate({ to: "/dashboard" });
+      const res = await signup(fullName, email, password, departmentId, designation, role);
+      if (res && (res as any).isPending) {
+        toast.success("Registration request submitted! Your account is pending administrator approval.");
+        navigate({ to: "/auth" });
+      } else {
+        toast.success(`Welcome, ${fullName.split(" ")[0]}! Your account has been registered.`);
+        navigate({ to: "/dashboard" });
+      }
     } catch (err: any) {
       toast.error(err.message || "Failed to register account");
     } finally {

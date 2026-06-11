@@ -1,6 +1,6 @@
 // Mock data for VertexEMS — frontend-only seed
-export type EmploymentStatus = "active" | "on_leave" | "probation" | "terminated";
-export type Role = "admin" | "employee" | "hr" | "manager" | "supervisor" | "accountant";
+export type EmploymentStatus = "active" | "on_leave" | "probation" | "terminated" | "pending";
+export type Role = "admin" | "employee" | "manager" | "supervisor" | "accountant";
 
 export interface Department {
   id: string;

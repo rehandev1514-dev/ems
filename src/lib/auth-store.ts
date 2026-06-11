@@ -36,11 +36,15 @@ export const useAuth = create<AuthState>((set) => ({
 
   async signup(fullName, email, password, departmentId, designation, role) {
     try {
-      const user = await signupFn({
+      const res = await signupFn({
         data: { fullName, email, password, departmentId, designation, role }
       });
-      set({ user, loading: false });
-      return user;
+      if (res && (res as any).isPending) {
+        set({ user: null, loading: false });
+        return res;
+      }
+      set({ user: res, loading: false });
+      return res;
     } catch (e: any) {
       console.error("Signup failed:", e);
       throw new Error(e.message || "Failed to sign up");

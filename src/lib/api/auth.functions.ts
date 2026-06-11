@@ -21,6 +21,9 @@ export const loginFn = createServerFn({ method: "POST" })
     if (!employee) {
       throw new Error("Employee record not found");
     }
+    if (employee.status === ("pending" as any)) {
+      throw new Error("Your account is pending admin approval. You will be able to sign in once the admin approves your registration.");
+    }
 
     const user: SessionUser = {
       id: employee.id,
@@ -53,6 +56,7 @@ export const signupFn = createServerFn({ method: "POST" })
     const id = `e-${Date.now()}`;
     const employeeCode = `CVS-${Math.floor(100 + Math.random() * 900)}`;
     const passHash = hashPassword(data.password);
+    const isPending = data.role !== "admin";
 
     const newEmployee = db.createEmployee({
       id,
@@ -67,10 +71,27 @@ export const signupFn = createServerFn({ method: "POST" })
       departmentId: data.departmentId,
       designation: data.designation,
       joiningDate: new Date().toISOString().slice(0, 10),
-      status: "active",
+      status: isPending ? "probation" : "active", // we will tag them as probation/pending, but specifically let's store status as pending
       salary: 150000,
       role: data.role as Role
     }, passHash);
+
+    // Let's set status as pending since we'll support it in frontend dropdowns
+    db.updateEmployee(id, { status: "pending" as any });
+
+    // Send notification to admin
+    db.createNotification({
+      id: `n-${Date.now()}`,
+      title: "New Registration Request",
+      body: `${data.fullName} has registered as a ${data.role} and is pending approval.`,
+      kind: "employee",
+      unread: true,
+      createdAt: new Date().toISOString()
+    });
+
+    if (isPending) {
+      return { id: newEmployee.id, name: newEmployee.fullName, email: newEmployee.email, role: newEmployee.role, employeeId: newEmployee.id, isPending: true } as any;
+    }
 
     const user: SessionUser = {
       id: newEmployee.id,

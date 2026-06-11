@@ -362,6 +362,7 @@ function EmployeesPage() {
                   <Label htmlFor="status">Status</Label>
                   <select id="status" value={formData.status} onChange={(e) => setFormData({...formData, status: e.target.value as any})} className="w-full rounded-md border border-input bg-background px-3 h-10 text-sm">
                     <option value="active">Active</option>
+                    <option value="pending">Pending Approval</option>
                     <option value="on_leave">On Leave</option>
                     <option value="probation">Probation</option>
                     <option value="terminated">Terminated</option>
@@ -455,6 +456,7 @@ function EmployeesPage() {
                   <Label htmlFor="editStatus">Status</Label>
                   <select id="editStatus" value={formData.status} onChange={(e) => setFormData({...formData, status: e.target.value as any})} className="w-full rounded-md border border-input bg-background px-3 h-10 text-sm">
                     <option value="active">Active</option>
+                    <option value="pending">Pending Approval</option>
                     <option value="on_leave">On Leave</option>
                     <option value="probation">Probation</option>
                     <option value="terminated">Terminated</option>
