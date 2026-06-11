@@ -42,7 +42,7 @@ export const signupFn = createServerFn({ method: "POST" })
     password: z.string().min(6),
     departmentId: z.string(),
     designation: z.string().min(2),
-    role: z.enum(["admin", "employee", "hr", "manager"])
+    role: z.enum(["admin", "employee", "manager", "supervisor", "accountant"])
   }))
   .handler(async ({ data }) => {
     const existing = db.getEmployeeByEmail(data.email);

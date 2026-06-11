@@ -13,7 +13,7 @@ export const getEmployeesFn = createServerFn({ method: "GET" })
     const all = db.getEmployees();
 
     // Enforce RBAC filtering
-    if (caller.role === "admin" || caller.role === "hr" || caller.role === "manager") {
+    if (caller.role === "admin" || caller.role === "manager") {
       return all;
     }
     // Employee can only see basic directory or limited details, but for the table listing let's filter or return all based on company policy.
@@ -26,8 +26,8 @@ export const getEmployeeByIdFn = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     const caller = requireAuth();
     
-    // RBAC check: employees can only view their own profile, others (admin, hr, manager) can view any
-    if (caller.role !== "admin" && caller.role !== "hr" && caller.role !== "manager" && caller.id !== data.id) {
+    // RBAC check: employees can only view their own profile, others (admin, manager) can view any
+    if (caller.role !== "admin" && caller.role !== "manager" && caller.id !== data.id) {
       throw new Error("Forbidden: You can only view your own profile");
     }
 
@@ -50,10 +50,10 @@ export const createEmployeeFn = createServerFn({ method: "POST" })
     joiningDate: z.string(),
     status: z.enum(["active", "on_leave", "probation", "terminated"]),
     salary: z.number().positive(),
-    role: z.enum(["admin", "employee", "hr", "manager"])
+    role: z.enum(["admin", "employee", "manager", "supervisor", "accountant"])
   }))
   .handler(async ({ data }) => {
-    const caller = requireRole(["admin", "hr"]);
+    const caller = requireRole(["admin", "manager"]);
     const existing = db.getEmployeeByEmail(data.email);
     if (existing) throw new Error("Email already registered");
 
@@ -79,14 +79,14 @@ export const updateEmployeeFn = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     const caller = requireAuth();
     
-    // RBAC: employees can edit some of their own details (e.g. phone, address). HR/Admin can edit anything.
-    if (caller.role !== "admin" && caller.role !== "hr" && caller.id !== data.id) {
+    // RBAC: employees can edit some of their own details (e.g. phone, address). Admin/Manager can edit anything.
+    if (caller.role !== "admin" && caller.role !== "manager" && caller.id !== data.id) {
       throw new Error("Forbidden: Insufficient privileges to update employee details");
     }
 
     // Secure payload: prevent employees from changing role, department, salary or status
     const updates = { ...data.updates };
-    if (caller.role !== "admin" && caller.role !== "hr") {
+    if (caller.role !== "admin" && caller.role !== "manager") {
       delete updates.salary;
       delete updates.role;
       delete updates.status;
@@ -105,7 +105,7 @@ export const updateEmployeeFn = createServerFn({ method: "POST" })
 export const deleteEmployeeFn = createServerFn({ method: "POST" })
   .inputValidator(z.object({ id: z.string() }))
   .handler(async ({ data }) => {
-    const caller = requireRole(["admin", "hr"]);
+    const caller = requireRole(["admin"]);
     const success = db.deleteEmployee(data.id);
     if (!success) throw new Error("Employee not found");
     db.logAction(caller.name, "DELETE", `Employee ${data.id}`);
@@ -272,7 +272,7 @@ export const updateLeaveStatusFn = createServerFn({ method: "POST" })
     status: z.enum(["approved", "rejected"])
   }))
   .handler(async ({ data }) => {
-    const caller = requireRole(["admin", "hr", "manager"]);
+    const caller = requireRole(["admin", "manager"]);
     
     const request = db.getLeaves().find(l => l.id === data.id);
     if (!request) throw new Error("Leave request not found");
@@ -317,7 +317,7 @@ export const uploadDocumentFn = createServerFn({ method: "POST" })
     const caller = requireAuth();
     
     // Check privilege
-    if (caller.role !== "admin" && caller.role !== "hr" && caller.id !== data.employeeId) {
+    if (caller.role !== "admin" && caller.role !== "manager" && caller.id !== data.employeeId) {
       throw new Error("Forbidden: Insufficient privileges to upload documents for this employee");
     }
 
@@ -342,7 +342,7 @@ export const deleteDocumentFn = createServerFn({ method: "POST" })
     const doc = db.getDocuments().find(d => d.id === data.id);
     if (!doc) throw new Error("Document not found");
 
-    if (caller.role !== "admin" && caller.role !== "hr" && caller.id !== doc.employeeId) {
+    if (caller.role !== "admin" && caller.role !== "manager" && caller.id !== doc.employeeId) {
       throw new Error("Forbidden: Insufficient privileges");
     }
 
@@ -376,7 +376,7 @@ export const createAssetFn = createServerFn({ method: "POST" })
     value: z.number().positive()
   }))
   .handler(async ({ data }) => {
-    const caller = requireRole(["admin", "hr", "accountant"]);
+    const caller = requireRole(["admin", "accountant"]);
     const asset = db.createAsset({
       id: `as-${Date.now()}`,
       ...data
@@ -391,7 +391,7 @@ export const updateAssetFn = createServerFn({ method: "POST" })
     updates: z.any()
   }))
   .handler(async ({ data }) => {
-    const caller = requireRole(["admin", "hr", "accountant"]);
+    const caller = requireRole(["admin", "accountant"]);
     const updated = db.updateAsset(data.id, data.updates);
     if (!updated) throw new Error("Asset not found");
     db.logAction(caller.name, "UPDATE_ASSET", `Asset ${data.id}`);
@@ -426,7 +426,7 @@ export const getTasksFn = createServerFn({ method: "GET" })
 // ------------------------------------
 export const getAuditLogsFn = createServerFn({ method: "GET" })
   .handler(async () => {
-    requireRole(["admin", "hr", "accountant"]);
+    requireRole(["admin", "accountant"]);
     return db.getAuditLogs();
   });
 

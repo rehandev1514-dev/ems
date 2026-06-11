@@ -150,8 +150,8 @@ function SignupPage() {
                 >
                   <option value="employee">Employee</option>
                   <option value="manager">Manager</option>
-                  <option value="hr">HR Specialist</option>
-                  <option value="admin">Administrator</option>
+                  <option value="supervisor">Supervisor</option>
+                  <option value="accountant">Accountant</option>
                 </select>
               </div>
             </div>

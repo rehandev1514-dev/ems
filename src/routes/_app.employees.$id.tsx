@@ -191,9 +191,9 @@ function EmployeeProfile() {
     updateMutation.mutate(formData);
   };
 
-  const isHRorAdmin = caller?.role === "admin" || caller?.role === "hr";
+  const isHRorAdmin = caller?.role === "admin" || caller?.role === "manager";
   const canEditSelf = caller?.id === emp.id;
-  const canSeeSalary = caller?.role === "admin" || caller?.role === "hr" || caller?.role === "accountant";
+  const canSeeSalary = caller?.role === "admin" || caller?.role === "accountant";
 
   return (
     <>
@@ -468,7 +468,6 @@ function EmployeeProfile() {
                       <select id="editRole" value={formData.role} onChange={(e) => setFormData({...formData, role: e.target.value as any})} className="w-full rounded-md border border-input bg-background px-3 h-10 text-sm">
                         <option value="employee">Employee</option>
                         <option value="manager">Manager</option>
-                        <option value="hr">HR</option>
                         <option value="admin">Admin</option>
                       </select>
                     </div>

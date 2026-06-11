@@ -45,11 +45,11 @@
       "gender": "female",
       "dob": "1991-12-22",
       "departmentId": "d3",
-      "designation": "HR Lead",
+      "designation": "People Ops Manager",
       "joiningDate": "2023-12-24",
       "status": "active",
       "salary": 380000,
-      "role": "hr"
+      "role": "manager"
     },
     {
       "id": "e4",
@@ -203,23 +203,6 @@
       "status": "active",
       "salary": 160000,
       "role": "employee"
-    },
-    {
-      "id": "e-1781172923040",
-      "employeeCode": "CVS-601",
-      "fullName": "Wajiha Zehra",
-      "email": "wajiha@codevertex.io",
-      "phone": "+92 300 0000000",
-      "cnic": "42101-0000000-0",
-      "address": "Address",
-      "gender": "male",
-      "dob": "1995-01-01",
-      "departmentId": "d1",
-      "designation": "Software Engineer",
-      "joiningDate": "2026-06-11",
-      "status": "active",
-      "salary": 150000,
-      "role": "employee"
     }
   ],
   "departments": [
@@ -295,10 +278,10 @@
       "id": "a-e1-2",
       "employeeId": "e1",
       "date": "2026-06-09",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e1-3",
@@ -313,10 +296,10 @@
       "id": "a-e1-6",
       "employeeId": "e1",
       "date": "2026-06-05",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e1-7",
@@ -340,37 +323,37 @@
       "id": "a-e1-9",
       "employeeId": "e1",
       "date": "2026-06-02",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e1-10",
       "employeeId": "e1",
       "date": "2026-06-01",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
     },
     {
       "id": "a-e1-13",
       "employeeId": "e1",
       "date": "2026-05-29",
       "checkIn": "09:00",
-      "checkOut": "13:00",
-      "status": "half_day",
-      "hours": 4
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e1-14",
       "employeeId": "e1",
       "date": "2026-05-28",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e1-15",
@@ -385,10 +368,10 @@
       "id": "a-e1-16",
       "employeeId": "e1",
       "date": "2026-05-26",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e1-17",
@@ -413,18 +396,18 @@
       "employeeId": "e1",
       "date": "2026-05-21",
       "checkIn": "09:00",
-      "checkOut": "13:00",
-      "status": "half_day",
-      "hours": 4
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e1-22",
       "employeeId": "e1",
       "date": "2026-05-20",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "absent",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e1-23",
@@ -467,9 +450,9 @@
       "employeeId": "e1",
       "date": "2026-05-13",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e2-0",
@@ -494,9 +477,9 @@
       "employeeId": "e2",
       "date": "2026-06-09",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e2-3",
@@ -520,19 +503,19 @@
       "id": "a-e2-7",
       "employeeId": "e2",
       "date": "2026-06-04",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e2-8",
       "employeeId": "e2",
       "date": "2026-06-03",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e2-9",
@@ -540,7 +523,7 @@
       "date": "2026-06-02",
       "checkIn": null,
       "checkOut": null,
-      "status": "leave",
+      "status": "absent",
       "hours": 0
     },
     {
@@ -548,9 +531,9 @@
       "employeeId": "e2",
       "date": "2026-06-01",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e2-13",
@@ -565,10 +548,10 @@
       "id": "a-e2-14",
       "employeeId": "e2",
       "date": "2026-05-28",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "absent",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e2-15",
@@ -592,10 +575,10 @@
       "id": "a-e2-17",
       "employeeId": "e2",
       "date": "2026-05-25",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "absent",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e2-20",
@@ -646,28 +629,28 @@
       "id": "a-e2-27",
       "employeeId": "e2",
       "date": "2026-05-15",
-      "checkIn": "09:45",
-      "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
-    },
-    {
-      "id": "a-e2-28",
-      "employeeId": "e2",
-      "date": "2026-05-14",
       "checkIn": "09:00",
       "checkOut": "18:00",
       "status": "present",
       "hours": 9
     },
     {
+      "id": "a-e2-28",
+      "employeeId": "e2",
+      "date": "2026-05-14",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
+    },
+    {
       "id": "a-e2-29",
       "employeeId": "e2",
       "date": "2026-05-13",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e3-0",
@@ -682,10 +665,10 @@
       "id": "a-e3-1",
       "employeeId": "e3",
       "date": "2026-06-10",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e3-2",
@@ -700,19 +683,19 @@
       "id": "a-e3-3",
       "employeeId": "e3",
       "date": "2026-06-08",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
     },
     {
       "id": "a-e3-6",
       "employeeId": "e3",
       "date": "2026-06-05",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e3-7",
@@ -728,36 +711,36 @@
       "employeeId": "e3",
       "date": "2026-06-03",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e3-9",
       "employeeId": "e3",
       "date": "2026-06-02",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e3-10",
       "employeeId": "e3",
       "date": "2026-06-01",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e3-13",
       "employeeId": "e3",
       "date": "2026-05-29",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e3-14",
@@ -772,10 +755,10 @@
       "id": "a-e3-15",
       "employeeId": "e3",
       "date": "2026-05-27",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e3-16",
@@ -799,19 +782,19 @@
       "id": "a-e3-20",
       "employeeId": "e3",
       "date": "2026-05-22",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
     },
     {
       "id": "a-e3-21",
       "employeeId": "e3",
       "date": "2026-05-21",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e3-22",
@@ -835,19 +818,19 @@
       "id": "a-e3-24",
       "employeeId": "e3",
       "date": "2026-05-18",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
     },
     {
       "id": "a-e3-27",
       "employeeId": "e3",
       "date": "2026-05-15",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e3-28",
@@ -862,10 +845,10 @@
       "id": "a-e3-29",
       "employeeId": "e3",
       "date": "2026-05-13",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e4-0",
@@ -880,19 +863,19 @@
       "id": "a-e4-1",
       "employeeId": "e4",
       "date": "2026-06-10",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e4-2",
       "employeeId": "e4",
       "date": "2026-06-09",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e4-3",
@@ -908,9 +891,9 @@
       "employeeId": "e4",
       "date": "2026-06-05",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e4-7",
@@ -926,9 +909,9 @@
       "employeeId": "e4",
       "date": "2026-06-03",
       "checkIn": "09:00",
-      "checkOut": "13:00",
-      "status": "half_day",
-      "hours": 4
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e4-9",
@@ -944,9 +927,9 @@
       "employeeId": "e4",
       "date": "2026-06-01",
       "checkIn": "09:00",
-      "checkOut": "13:00",
-      "status": "half_day",
-      "hours": 4
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e4-13",
@@ -1006,10 +989,10 @@
       "id": "a-e4-21",
       "employeeId": "e4",
       "date": "2026-05-21",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e4-22",
@@ -1033,10 +1016,10 @@
       "id": "a-e4-24",
       "employeeId": "e4",
       "date": "2026-05-18",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
     },
     {
       "id": "a-e4-27",
@@ -1051,19 +1034,19 @@
       "id": "a-e4-28",
       "employeeId": "e4",
       "date": "2026-05-14",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
     },
     {
       "id": "a-e4-29",
       "employeeId": "e4",
       "date": "2026-05-13",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e5-0",
@@ -1096,10 +1079,10 @@
       "id": "a-e5-3",
       "employeeId": "e5",
       "date": "2026-06-08",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e5-6",
@@ -1114,10 +1097,10 @@
       "id": "a-e5-7",
       "employeeId": "e5",
       "date": "2026-06-04",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e5-8",
@@ -1159,10 +1142,10 @@
       "id": "a-e5-14",
       "employeeId": "e5",
       "date": "2026-05-28",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e5-15",
@@ -1222,28 +1205,28 @@
       "id": "a-e5-23",
       "employeeId": "e5",
       "date": "2026-05-19",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
-    },
-    {
-      "id": "a-e5-24",
-      "employeeId": "e5",
-      "date": "2026-05-18",
       "checkIn": "09:45",
       "checkOut": "18:00",
       "status": "late",
       "hours": 8.25
     },
     {
-      "id": "a-e5-27",
+      "id": "a-e5-24",
       "employeeId": "e5",
-      "date": "2026-05-15",
+      "date": "2026-05-18",
       "checkIn": "09:00",
       "checkOut": "18:00",
       "status": "present",
       "hours": 9
+    },
+    {
+      "id": "a-e5-27",
+      "employeeId": "e5",
+      "date": "2026-05-15",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e5-28",
@@ -1258,10 +1241,10 @@
       "id": "a-e5-29",
       "employeeId": "e5",
       "date": "2026-05-13",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e6-0",
@@ -1276,10 +1259,10 @@
       "id": "a-e6-1",
       "employeeId": "e6",
       "date": "2026-06-10",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
     },
     {
       "id": "a-e6-2",
@@ -1312,10 +1295,10 @@
       "id": "a-e6-7",
       "employeeId": "e6",
       "date": "2026-06-04",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "absent",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e6-8",
@@ -1331,18 +1314,18 @@
       "employeeId": "e6",
       "date": "2026-06-02",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e6-10",
       "employeeId": "e6",
       "date": "2026-06-01",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e6-13",
@@ -1358,9 +1341,9 @@
       "employeeId": "e6",
       "date": "2026-05-28",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e6-15",
@@ -1375,28 +1358,28 @@
       "id": "a-e6-16",
       "employeeId": "e6",
       "date": "2026-05-26",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
     },
     {
       "id": "a-e6-17",
       "employeeId": "e6",
       "date": "2026-05-25",
       "checkIn": "09:00",
-      "checkOut": "13:00",
-      "status": "half_day",
-      "hours": 4
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e6-20",
       "employeeId": "e6",
       "date": "2026-05-22",
-      "checkIn": "09:45",
-      "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "checkIn": "09:00",
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e6-21",
@@ -1411,19 +1394,19 @@
       "id": "a-e6-22",
       "employeeId": "e6",
       "date": "2026-05-20",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "absent",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e6-23",
       "employeeId": "e6",
       "date": "2026-05-19",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
     },
     {
       "id": "a-e6-24",
@@ -1447,10 +1430,10 @@
       "id": "a-e6-28",
       "employeeId": "e6",
       "date": "2026-05-14",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e6-29",
@@ -1483,10 +1466,10 @@
       "id": "a-e7-2",
       "employeeId": "e7",
       "date": "2026-06-09",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
     },
     {
       "id": "a-e7-3",
@@ -1501,10 +1484,10 @@
       "id": "a-e7-6",
       "employeeId": "e7",
       "date": "2026-06-05",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e7-7",
@@ -1519,19 +1502,19 @@
       "id": "a-e7-8",
       "employeeId": "e7",
       "date": "2026-06-03",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e7-9",
       "employeeId": "e7",
       "date": "2026-06-02",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e7-10",
@@ -1591,19 +1574,19 @@
       "id": "a-e7-20",
       "employeeId": "e7",
       "date": "2026-05-22",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e7-21",
       "employeeId": "e7",
       "date": "2026-05-21",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e7-22",
@@ -1628,9 +1611,9 @@
       "employeeId": "e7",
       "date": "2026-05-18",
       "checkIn": "09:00",
-      "checkOut": "13:00",
-      "status": "half_day",
-      "hours": 4
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e7-27",
@@ -1645,19 +1628,19 @@
       "id": "a-e7-28",
       "employeeId": "e7",
       "date": "2026-05-14",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e7-29",
       "employeeId": "e7",
       "date": "2026-05-13",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e8-0",
@@ -1681,10 +1664,10 @@
       "id": "a-e8-2",
       "employeeId": "e8",
       "date": "2026-06-09",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e8-3",
@@ -1699,10 +1682,10 @@
       "id": "a-e8-6",
       "employeeId": "e8",
       "date": "2026-06-05",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "absent",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e8-7",
@@ -1717,19 +1700,19 @@
       "id": "a-e8-8",
       "employeeId": "e8",
       "date": "2026-06-03",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e8-9",
       "employeeId": "e8",
       "date": "2026-06-02",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e8-10",
@@ -1753,19 +1736,19 @@
       "id": "a-e8-14",
       "employeeId": "e8",
       "date": "2026-05-28",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
     },
     {
       "id": "a-e8-15",
       "employeeId": "e8",
       "date": "2026-05-27",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e8-16",
@@ -1780,10 +1763,10 @@
       "id": "a-e8-17",
       "employeeId": "e8",
       "date": "2026-05-25",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e8-20",
@@ -1798,10 +1781,10 @@
       "id": "a-e8-21",
       "employeeId": "e8",
       "date": "2026-05-21",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e8-22",
@@ -1843,10 +1826,10 @@
       "id": "a-e8-28",
       "employeeId": "e8",
       "date": "2026-05-14",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e8-29",
@@ -1861,10 +1844,10 @@
       "id": "a-e9-0",
       "employeeId": "e9",
       "date": "2026-06-11",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e9-1",
@@ -1906,10 +1889,10 @@
       "id": "a-e9-7",
       "employeeId": "e9",
       "date": "2026-06-04",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e9-8",
@@ -2014,10 +1997,10 @@
       "id": "a-e9-23",
       "employeeId": "e9",
       "date": "2026-05-19",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
     },
     {
       "id": "a-e9-24",
@@ -2032,10 +2015,10 @@
       "id": "a-e9-27",
       "employeeId": "e9",
       "date": "2026-05-15",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
     },
     {
       "id": "a-e9-28",
@@ -2069,9 +2052,9 @@
       "employeeId": "e10",
       "date": "2026-06-10",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e10-2",
@@ -2105,9 +2088,9 @@
       "employeeId": "e10",
       "date": "2026-06-04",
       "checkIn": "09:00",
-      "checkOut": "13:00",
-      "status": "half_day",
-      "hours": 4
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e10-8",
@@ -2122,28 +2105,28 @@
       "id": "a-e10-9",
       "employeeId": "e10",
       "date": "2026-06-02",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e10-10",
       "employeeId": "e10",
       "date": "2026-06-01",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e10-13",
       "employeeId": "e10",
       "date": "2026-05-29",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "absent",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e10-14",
@@ -2168,9 +2151,9 @@
       "employeeId": "e10",
       "date": "2026-05-26",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e10-17",
@@ -2231,9 +2214,9 @@
       "employeeId": "e10",
       "date": "2026-05-15",
       "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
     },
     {
       "id": "a-e10-28",
@@ -2248,10 +2231,10 @@
       "id": "a-e10-29",
       "employeeId": "e10",
       "date": "2026-05-13",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "leave",
-      "hours": 0
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e11-0",
@@ -2284,28 +2267,28 @@
       "id": "a-e11-3",
       "employeeId": "e11",
       "date": "2026-06-08",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e11-6",
       "employeeId": "e11",
       "date": "2026-06-05",
       "checkIn": "09:00",
-      "checkOut": "13:00",
-      "status": "half_day",
-      "hours": 4
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e11-7",
       "employeeId": "e11",
       "date": "2026-06-04",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e11-8",
@@ -2320,10 +2303,10 @@
       "id": "a-e11-9",
       "employeeId": "e11",
       "date": "2026-06-02",
-      "checkIn": "09:45",
+      "checkIn": "09:00",
       "checkOut": "18:00",
-      "status": "late",
-      "hours": 8.25
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e11-10",
@@ -2347,10 +2330,10 @@
       "id": "a-e11-14",
       "employeeId": "e11",
       "date": "2026-05-28",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
     },
     {
       "id": "a-e11-15",
@@ -2374,10 +2357,10 @@
       "id": "a-e11-17",
       "employeeId": "e11",
       "date": "2026-05-25",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e11-20",
@@ -2437,19 +2420,19 @@
       "id": "a-e11-28",
       "employeeId": "e11",
       "date": "2026-05-14",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e11-29",
       "employeeId": "e11",
       "date": "2026-05-13",
-      "checkIn": "09:00",
+      "checkIn": "09:45",
       "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "status": "late",
+      "hours": 8.25
     },
     {
       "id": "a-e12-0",
@@ -2482,10 +2465,10 @@
       "id": "a-e12-3",
       "employeeId": "e12",
       "date": "2026-06-08",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
     },
     {
       "id": "a-e12-6",
@@ -2509,10 +2492,10 @@
       "id": "a-e12-8",
       "employeeId": "e12",
       "date": "2026-06-03",
-      "checkIn": "09:00",
-      "checkOut": "18:00",
-      "status": "present",
-      "hours": 9
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
     },
     {
       "id": "a-e12-9",
@@ -2635,10 +2618,10 @@
       "id": "a-e12-28",
       "employeeId": "e12",
       "date": "2026-05-14",
-      "checkIn": null,
-      "checkOut": null,
-      "status": "absent",
-      "hours": 0
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
     },
     {
       "id": "a-e12-29",
@@ -3062,43 +3045,11 @@
   ],
   "auditLogs": [
     {
-      "id": "au-1781173323098-6wv2",
-      "actor": "Admin Vertex",
-      "action": "LOGIN",
-      "target": "Workplace login",
-      "timestamp": "2026-06-11T10:22:03.098Z",
-      "ip": "—"
-    },
-    {
-      "id": "au-1781173319314-j1uc",
-      "actor": "Wajiha Zehra",
-      "action": "LOGOUT",
-      "target": "Workplace logout",
-      "timestamp": "2026-06-11T10:21:59.314Z",
-      "ip": "—"
-    },
-    {
-      "id": "au-1781172923045-8ozj",
-      "actor": "System",
-      "action": "CREATE",
-      "target": "Employee e-1781172923040 — Wajiha Zehra",
-      "timestamp": "2026-06-11T10:15:23.045Z",
-      "ip": "—"
-    },
-    {
-      "id": "au-1781172832392-7fwm",
-      "actor": "Admin Vertex",
-      "action": "LOGIN",
-      "target": "Workplace login",
-      "timestamp": "2026-06-11T10:13:52.392Z",
-      "ip": "—"
-    },
-    {
       "id": "au1",
       "actor": "Sana Mirza",
       "action": "UPDATE",
       "target": "Employee e6 — status changed to probation",
-      "timestamp": "2026-06-10T10:13:52.334Z",
+      "timestamp": "2026-06-10T10:24:48.463Z",
       "ip": "203.99.12.41"
     },
     {
@@ -3106,7 +3057,7 @@
       "actor": "Bilal Ahmed",
       "action": "CREATE",
       "target": "Project p3 — Atlas CRM Migration",
-      "timestamp": "2026-06-04T10:13:52.334Z",
+      "timestamp": "2026-06-04T10:24:48.463Z",
       "ip": "39.45.198.10"
     },
     {
@@ -3114,7 +3065,7 @@
       "actor": "Admin",
       "action": "LOGIN",
       "target": "Admin console",
-      "timestamp": "2026-06-11T10:13:52.334Z",
+      "timestamp": "2026-06-11T10:24:48.463Z",
       "ip": "10.0.0.4"
     },
     {
@@ -3122,7 +3073,7 @@
       "actor": "Nimra Hassan",
       "action": "DELETE",
       "target": "Asset as9 — retired projector",
-      "timestamp": "2026-06-09T10:13:52.334Z",
+      "timestamp": "2026-06-09T10:24:48.463Z",
       "ip": "182.180.4.22"
     },
     {
@@ -3130,7 +3081,7 @@
       "actor": "Zara Sheikh",
       "action": "UPDATE",
       "target": "Leave l4 — approved",
-      "timestamp": "2026-06-11T10:13:52.334Z",
+      "timestamp": "2026-06-11T10:24:48.463Z",
       "ip": "39.45.10.7"
     },
     {
@@ -3138,66 +3089,62 @@
       "actor": "System",
       "action": "ROLE_CHANGE",
       "target": "User e3 granted hr_lead permissions",
-      "timestamp": "2026-05-12T10:13:52.334Z",
+      "timestamp": "2026-05-12T10:24:48.463Z",
       "ip": "—"
     }
   ],
   "credentials": [
     {
       "email": "admin@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "ayesha.khan@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "bilal.ahmed@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "sana.mirza@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "hamza.tariq@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "mariam.yousuf@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "usman.riaz@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "zara.sheikh@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "faisal.iqbal@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "nimra.hassan@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "omer.sultan@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "rabia.noor@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     },
     {
       "email": "daniyal.saeed@codevertex.io",
-      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
-    },
-    {
-      "email": "wajiha@codevertex.io",
-      "passwordHash": "496d7155fc75eadb00df940b633980c0:64ac5d0a7e28a85e28b930a80139081815c6e8f8b51208a9ae4850402c63085bd9a26b6bb740b96c645d2040a4add0444a9467524f94070e04b9941b9496c806"
+      "passwordHash": "ab6f36f6f1d5a860a3193df137319d01:efe060dcb9768cfa888dbcafc67921a75a5219fbdc914e9dd9d5d9704a3562f1029b76e963e9439b2965a96c59031de05f6a4b40fa6cef60a2eab92bf5ac55d3"
     }
   ]
 }

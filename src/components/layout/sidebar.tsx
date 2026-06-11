@@ -8,19 +8,19 @@ import { cn } from "@/lib/utils";
 import type { Role } from "@/lib/mock-data";
 
 const nav: Array<{ to: string; label: string; icon: typeof LayoutDashboard; roles: Role[] }> = [
-  { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard, roles: ["admin", "employee", "hr", "manager", "supervisor", "accountant"] },
-  { to: "/employees", label: "Employees", icon: Users, roles: ["admin", "hr", "manager"] },
-  { to: "/departments", label: "Departments", icon: Building2, roles: ["admin", "hr"] },
-  { to: "/attendance", label: "Attendance", icon: CalendarCheck, roles: ["admin", "employee", "hr", "manager", "supervisor"] },
-  { to: "/leaves", label: "Leaves", icon: Plane, roles: ["admin", "employee", "hr", "manager", "supervisor"] },
+  { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard, roles: ["admin", "employee", "manager", "supervisor", "accountant"] },
+  { to: "/employees", label: "Employees", icon: Users, roles: ["admin", "manager"] },
+  { to: "/departments", label: "Departments", icon: Building2, roles: ["admin"] },
+  { to: "/attendance", label: "Attendance", icon: CalendarCheck, roles: ["admin", "employee", "manager", "supervisor"] },
+  { to: "/leaves", label: "Leaves", icon: Plane, roles: ["admin", "employee", "manager", "supervisor"] },
   { to: "/projects", label: "Projects", icon: FolderKanban, roles: ["admin", "employee", "manager", "supervisor"] },
   { to: "/tasks", label: "Tasks", icon: ListChecks, roles: ["admin", "employee", "manager", "supervisor"] },
-  { to: "/assets", label: "Assets", icon: Boxes, roles: ["admin", "hr", "accountant"] },
-  { to: "/documents", label: "Documents", icon: FileText, roles: ["admin", "employee", "hr"] },
-  { to: "/notifications", label: "Notifications", icon: Bell, roles: ["admin", "employee", "hr", "manager", "supervisor", "accountant"] },
-  { to: "/reports", label: "Reports", icon: BarChart3, roles: ["admin", "hr", "manager", "accountant"] },
-  { to: "/audit-logs", label: "Audit Logs", icon: ScrollText, roles: ["admin", "hr", "accountant"] },
-  { to: "/settings", label: "Settings", icon: Settings, roles: ["admin", "employee", "hr", "manager", "supervisor", "accountant"] },
+  { to: "/assets", label: "Assets", icon: Boxes, roles: ["admin", "accountant"] },
+  { to: "/documents", label: "Documents", icon: FileText, roles: ["admin", "employee"] },
+  { to: "/notifications", label: "Notifications", icon: Bell, roles: ["admin", "employee", "manager", "supervisor", "accountant"] },
+  { to: "/reports", label: "Reports", icon: BarChart3, roles: ["admin", "manager", "accountant"] },
+  { to: "/audit-logs", label: "Audit Logs", icon: ScrollText, roles: ["admin", "accountant"] },
+  { to: "/settings", label: "Settings", icon: Settings, roles: ["admin", "employee", "manager", "supervisor", "accountant"] },
 ];
 
 export function Sidebar() {
