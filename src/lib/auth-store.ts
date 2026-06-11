@@ -17,7 +17,6 @@ interface AuthState {
   signup: (fullName: string, email: string, password: string, departmentId: string, designation: string, role: Role) => Promise<SessionUser>;
   logout: () => Promise<void>;
   checkSession: () => Promise<SessionUser | null>;
-  switchRole: (role: Role) => void;
 }
 
 export const useAuth = create<AuthState>((set) => ({
@@ -68,10 +67,6 @@ export const useAuth = create<AuthState>((set) => ({
       set({ user: null, loading: false });
       return null;
     }
-  },
-
-  switchRole(role) {
-    set((s) => (s.user ? { user: { ...s.user, role } } : s));
   }
 }));
 

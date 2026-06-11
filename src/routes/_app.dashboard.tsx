@@ -66,7 +66,7 @@ function AdminDashboard() {
   return (
     <>
       <PageHeader
-        title={`Welcome back, ${user.name.split(" ")[0]}`}
+        title={`Hi, ${user.name}`}
         description="Here's what's happening across Code Vertex Solutions today."
         actions={
           <>
@@ -245,7 +245,7 @@ function EmployeeDashboard() {
   return (
     <>
       <PageHeader
-        title={`Hi ${me.fullName.split(" ")[0]}`}
+        title={`Hi, ${user.name}`}
         description="Your personal workspace at Code Vertex Solutions."
         actions={
           <>

@@ -1,20 +1,30 @@
 import { useAuth } from "@/lib/auth-store";
-import { Bell, Search, ChevronDown } from "lucide-react";
+import { useNavigate } from "@tanstack/react-router";
+import { Bell, Search, LogOut, User } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
   DropdownMenuSeparator, DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { initials } from "@/lib/format";
 import { notifications } from "@/lib/mock-data";
-import type { Role } from "@/lib/mock-data";
+
+const roleLabels: Record<string, string> = {
+  admin: "Administrator",
+  hr: "HR Specialist",
+  manager: "Manager",
+  employee: "Employee",
+  supervisor: "Supervisor",
+  accountant: "Accountant",
+};
 
 export function Topbar() {
   const user = useAuth((s) => s.user);
-  const switchRole = useAuth((s) => s.switchRole);
+  const logout = useAuth((s) => s.logout);
+  const navigate = useNavigate();
   if (!user) return null;
+
   const unread = notifications.filter((n) => n.unread).length;
 
   return (
@@ -28,6 +38,7 @@ export function Topbar() {
       </div>
 
       <div className="ml-auto flex items-center gap-2">
+        {/* Notifications */}
         <DropdownMenu>
           <DropdownMenuTrigger className="relative inline-flex items-center justify-center size-9 rounded-lg border border-border bg-card hover:bg-accent transition-colors">
             <Bell className="size-4" />
@@ -52,6 +63,7 @@ export function Topbar() {
           </DropdownMenuContent>
         </DropdownMenu>
 
+        {/* User profile menu — no role switching */}
         <DropdownMenu>
           <DropdownMenuTrigger className="flex items-center gap-2.5 rounded-lg border border-border bg-card hover:bg-accent px-2 py-1.5 transition-colors">
             <Avatar className="size-7">
@@ -61,21 +73,29 @@ export function Topbar() {
             </Avatar>
             <div className="hidden sm:block text-left leading-tight">
               <div className="text-xs font-medium">{user.name}</div>
-              <div className="text-[10px] text-muted-foreground capitalize">{user.role}</div>
+              <div className="text-[10px] text-muted-foreground">{roleLabels[user.role] ?? user.role}</div>
             </div>
-            <ChevronDown className="size-3.5 text-muted-foreground" />
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-56">
-            <DropdownMenuLabel className="flex items-center justify-between">
-              <span>Demo role</span>
-              <Badge variant="outline" className="capitalize">{user.role}</Badge>
+          <DropdownMenuContent align="end" className="w-52">
+            <DropdownMenuLabel>
+              <div className="text-sm font-medium">{user.name}</div>
+              <div className="text-xs text-muted-foreground font-normal">{user.email}</div>
+              <div className="text-xs text-primary font-medium mt-0.5 capitalize">{roleLabels[user.role] ?? user.role}</div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
-            {(["admin", "employee", "manager", "hr"] as Role[]).map((r) => (
-              <DropdownMenuItem key={r} onClick={() => switchRole(r)} className="capitalize">
-                Switch to {r}
-              </DropdownMenuItem>
-            ))}
+            <DropdownMenuItem className="gap-2">
+              <User className="size-4" /> My profile
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem
+              className="gap-2 text-destructive focus:text-destructive"
+              onClick={async () => {
+                await logout();
+                navigate({ to: "/auth" });
+              }}
+            >
+              <LogOut className="size-4" /> Sign out
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

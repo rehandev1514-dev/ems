@@ -3062,6 +3062,22 @@
   ],
   "auditLogs": [
     {
+      "id": "au-1781173323098-6wv2",
+      "actor": "Admin Vertex",
+      "action": "LOGIN",
+      "target": "Workplace login",
+      "timestamp": "2026-06-11T10:22:03.098Z",
+      "ip": "—"
+    },
+    {
+      "id": "au-1781173319314-j1uc",
+      "actor": "Wajiha Zehra",
+      "action": "LOGOUT",
+      "target": "Workplace logout",
+      "timestamp": "2026-06-11T10:21:59.314Z",
+      "ip": "—"
+    },
+    {
       "id": "au-1781172923045-8ozj",
       "actor": "System",
       "action": "CREATE",
