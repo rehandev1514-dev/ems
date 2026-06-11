@@ -126,12 +126,6 @@ function AuthPage() {
               </Link>
             </div>
           </form>
-
-          <div className="mt-6 rounded-lg border border-dashed border-border p-3 text-xs text-muted-foreground space-y-1">
-            <div className="font-medium text-foreground">Demo accounts</div>
-            <div><code className="text-primary">admin@codevertex.io</code> — Admin</div>
-            <div><code className="text-primary">ayesha.khan@codevertex.io</code> — Employee</div>
-          </div>
         </Card>
       </div>
     </div>
