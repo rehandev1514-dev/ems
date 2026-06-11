@@ -203,6 +203,23 @@
       "status": "active",
       "salary": 160000,
       "role": "employee"
+    },
+    {
+      "id": "e-1781172923040",
+      "employeeCode": "CVS-601",
+      "fullName": "Wajiha Zehra",
+      "email": "wajiha@codevertex.io",
+      "phone": "+92 300 0000000",
+      "cnic": "42101-0000000-0",
+      "address": "Address",
+      "gender": "male",
+      "dob": "1995-01-01",
+      "departmentId": "d1",
+      "designation": "Software Engineer",
+      "joiningDate": "2026-06-11",
+      "status": "active",
+      "salary": 150000,
+      "role": "employee"
     }
   ],
   "departments": [
@@ -3045,6 +3062,14 @@
   ],
   "auditLogs": [
     {
+      "id": "au-1781172923045-8ozj",
+      "actor": "System",
+      "action": "CREATE",
+      "target": "Employee e-1781172923040 — Wajiha Zehra",
+      "timestamp": "2026-06-11T10:15:23.045Z",
+      "ip": "—"
+    },
+    {
       "id": "au-1781172832392-7fwm",
       "actor": "Admin Vertex",
       "action": "LOGIN",
@@ -3153,6 +3178,10 @@
     {
       "email": "daniyal.saeed@codevertex.io",
       "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "wajiha@codevertex.io",
+      "passwordHash": "496d7155fc75eadb00df940b633980c0:64ac5d0a7e28a85e28b930a80139081815c6e8f8b51208a9ae4850402c63085bd9a26b6bb740b96c645d2040a4add0444a9467524f94070e04b9941b9496c806"
     }
   ]
 }
