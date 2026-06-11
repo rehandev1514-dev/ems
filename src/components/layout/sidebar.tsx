@@ -56,7 +56,7 @@ export function Sidebar() {
               className={cn(
                 "group flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-all",
                 active
-                  ? "bg-gradient-to-r from-primary/15 to-secondary/5 text-foreground shadow-[inset_0_0_0_1px_var(--color-border)]"
+                  ? "bg-linear-to-r from-primary/15 to-secondary/5 text-foreground shadow-[inset_0_0_0_1px_var(--color-border)]"
                   : "text-muted-foreground hover:text-foreground hover:bg-sidebar-accent/50",
               )}
             >

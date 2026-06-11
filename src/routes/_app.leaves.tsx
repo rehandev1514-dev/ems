@@ -80,7 +80,7 @@ function LeavesPage() {
           { label: "Pending requests", value: mine.filter((l) => l.status === "pending").length, accent: "from-[--color-warning]/20" },
         ]).map((s) => (
           <Card key={s.label} className={`relative overflow-hidden p-5 glass shadow-elevated`}>
-            <div className={`absolute -top-10 -right-10 size-32 rounded-full blur-3xl bg-gradient-to-br ${s.accent} to-transparent opacity-60`} />
+            <div className={`absolute -top-10 -right-10 size-32 rounded-full blur-3xl bg-linear-to-br ${s.accent} to-transparent opacity-60`} />
             <p className="relative text-xs uppercase tracking-widest text-muted-foreground">{s.label}</p>
             <p className="relative mt-2 text-2xl font-display font-semibold">{s.value}</p>
           </Card>

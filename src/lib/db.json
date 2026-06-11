@@ -1,0 +1,3158 @@
+{
+  "employees": [
+    {
+      "id": "e1",
+      "employeeCode": "CVS-001",
+      "fullName": "Ayesha Khan",
+      "email": "ayesha.khan@codevertex.io",
+      "phone": "+92 300 1111111",
+      "cnic": "42101-1111111-1",
+      "address": "DHA Phase 6, Karachi",
+      "gender": "female",
+      "dob": "1994-04-12",
+      "departmentId": "d1",
+      "designation": "Senior Frontend Engineer",
+      "joiningDate": "2024-12-18",
+      "status": "active",
+      "salary": 320000,
+      "role": "employee"
+    },
+    {
+      "id": "e2",
+      "employeeCode": "CVS-000",
+      "fullName": "Admin Vertex",
+      "email": "admin@codevertex.io",
+      "phone": "+92 300 0000000",
+      "cnic": "42101-0000000-0",
+      "address": "Main Office, Karachi",
+      "gender": "male",
+      "dob": "1985-01-01",
+      "departmentId": "d3",
+      "designation": "System Administrator",
+      "joiningDate": "2020-01-01",
+      "status": "active",
+      "salary": 1000000,
+      "role": "admin"
+    },
+    {
+      "id": "e3",
+      "employeeCode": "CVS-003",
+      "fullName": "Sana Mirza",
+      "email": "sana.mirza@codevertex.io",
+      "phone": "+92 302 3333333",
+      "cnic": "42101-3333333-3",
+      "address": "F-7, Islamabad",
+      "gender": "female",
+      "dob": "1991-12-22",
+      "departmentId": "d3",
+      "designation": "HR Lead",
+      "joiningDate": "2023-12-24",
+      "status": "active",
+      "salary": 380000,
+      "role": "hr"
+    },
+    {
+      "id": "e4",
+      "employeeCode": "CVS-004",
+      "fullName": "Hamza Tariq",
+      "email": "hamza.tariq@codevertex.io",
+      "phone": "+92 303 4444444",
+      "cnic": "42101-4444444-4",
+      "address": "Gulberg, Lahore",
+      "gender": "male",
+      "dob": "1996-06-18",
+      "departmentId": "d1",
+      "designation": "Backend Engineer",
+      "joiningDate": "2025-08-05",
+      "status": "active",
+      "salary": 280000,
+      "role": "employee"
+    },
+    {
+      "id": "e5",
+      "employeeCode": "CVS-005",
+      "fullName": "Mariam Yousuf",
+      "email": "mariam.yousuf@codevertex.io",
+      "phone": "+92 304 5555555",
+      "cnic": "42101-5555555-5",
+      "address": "Clifton, Karachi",
+      "gender": "female",
+      "dob": "1993-02-09",
+      "departmentId": "d2",
+      "designation": "Design Lead",
+      "joiningDate": "2024-07-31",
+      "status": "active",
+      "salary": 360000,
+      "role": "manager"
+    },
+    {
+      "id": "e6",
+      "employeeCode": "CVS-006",
+      "fullName": "Usman Riaz",
+      "email": "usman.riaz@codevertex.io",
+      "phone": "+92 305 6666666",
+      "cnic": "42101-6666666-6",
+      "address": "Model Town, Lahore",
+      "gender": "male",
+      "dob": "1995-11-01",
+      "departmentId": "d2",
+      "designation": "Product Designer",
+      "joiningDate": "2025-10-14",
+      "status": "probation",
+      "salary": 240000,
+      "role": "employee"
+    },
+    {
+      "id": "e7",
+      "employeeCode": "CVS-007",
+      "fullName": "Zara Sheikh",
+      "email": "zara.sheikh@codevertex.io",
+      "phone": "+92 306 7777777",
+      "cnic": "42101-7777777-7",
+      "address": "PECHS, Karachi",
+      "gender": "female",
+      "dob": "1988-08-14",
+      "departmentId": "d4",
+      "designation": "Head of Sales",
+      "joiningDate": "2023-02-27",
+      "status": "active",
+      "salary": 520000,
+      "role": "manager"
+    },
+    {
+      "id": "e8",
+      "employeeCode": "CVS-008",
+      "fullName": "Faisal Iqbal",
+      "email": "faisal.iqbal@codevertex.io",
+      "phone": "+92 307 8888888",
+      "cnic": "42101-8888888-8",
+      "address": "Johar Town, Lahore",
+      "gender": "male",
+      "dob": "1997-03-27",
+      "departmentId": "d4",
+      "designation": "Account Executive",
+      "joiningDate": "2025-12-13",
+      "status": "active",
+      "salary": 220000,
+      "role": "employee"
+    },
+    {
+      "id": "e9",
+      "employeeCode": "CVS-009",
+      "fullName": "Nimra Hassan",
+      "email": "nimra.hassan@codevertex.io",
+      "phone": "+92 308 9999999",
+      "cnic": "42101-9999999-9",
+      "address": "G-9, Islamabad",
+      "gender": "female",
+      "dob": "1990-07-30",
+      "departmentId": "d5",
+      "designation": "Finance Manager",
+      "joiningDate": "2024-03-13",
+      "status": "active",
+      "salary": 460000,
+      "role": "manager"
+    },
+    {
+      "id": "e10",
+      "employeeCode": "CVS-010",
+      "fullName": "Omer Sultan",
+      "email": "omer.sultan@codevertex.io",
+      "phone": "+92 309 1010101",
+      "cnic": "42101-1010101-1",
+      "address": "DHA, Lahore",
+      "gender": "male",
+      "dob": "1992-05-05",
+      "departmentId": "d6",
+      "designation": "Operations Specialist",
+      "joiningDate": "2025-04-17",
+      "status": "on_leave",
+      "salary": 260000,
+      "role": "employee"
+    },
+    {
+      "id": "e11",
+      "employeeCode": "CVS-011",
+      "fullName": "Rabia Noor",
+      "email": "rabia.noor@codevertex.io",
+      "phone": "+92 310 1111121",
+      "cnic": "42101-1212121-2",
+      "address": "Gulshan, Karachi",
+      "gender": "female",
+      "dob": "1994-10-19",
+      "departmentId": "d1",
+      "designation": "QA Engineer",
+      "joiningDate": "2026-01-12",
+      "status": "active",
+      "salary": 210000,
+      "role": "employee"
+    },
+    {
+      "id": "e12",
+      "employeeCode": "CVS-012",
+      "fullName": "Daniyal Saeed",
+      "email": "daniyal.saeed@codevertex.io",
+      "phone": "+92 311 1313131",
+      "cnic": "42101-1313131-3",
+      "address": "Wapda Town, Lahore",
+      "gender": "male",
+      "dob": "1998-01-25",
+      "departmentId": "d1",
+      "designation": "Junior Engineer",
+      "joiningDate": "2026-03-13",
+      "status": "active",
+      "salary": 160000,
+      "role": "employee"
+    }
+  ],
+  "departments": [
+    {
+      "id": "d1",
+      "name": "Engineering",
+      "code": "ENG",
+      "managerId": "e2",
+      "headcount": 14,
+      "createdAt": "2024-04-02"
+    },
+    {
+      "id": "d2",
+      "name": "Design",
+      "code": "DSN",
+      "managerId": "e5",
+      "headcount": 6,
+      "createdAt": "2024-06-21"
+    },
+    {
+      "id": "d3",
+      "name": "Human Resources",
+      "code": "HR",
+      "managerId": "e3",
+      "headcount": 4,
+      "createdAt": "2023-12-24"
+    },
+    {
+      "id": "d4",
+      "name": "Sales & Marketing",
+      "code": "SAM",
+      "managerId": "e7",
+      "headcount": 9,
+      "createdAt": "2024-10-09"
+    },
+    {
+      "id": "d5",
+      "name": "Finance",
+      "code": "FIN",
+      "managerId": "e9",
+      "headcount": 5,
+      "createdAt": "2024-07-11"
+    },
+    {
+      "id": "d6",
+      "name": "Operations",
+      "code": "OPS",
+      "managerId": null,
+      "headcount": 7,
+      "createdAt": "2025-04-17"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "a-e1-0",
+      "employeeId": "e1",
+      "date": "2026-06-11",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-1",
+      "employeeId": "e1",
+      "date": "2026-06-10",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-2",
+      "employeeId": "e1",
+      "date": "2026-06-09",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-3",
+      "employeeId": "e1",
+      "date": "2026-06-08",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-6",
+      "employeeId": "e1",
+      "date": "2026-06-05",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-7",
+      "employeeId": "e1",
+      "date": "2026-06-04",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-8",
+      "employeeId": "e1",
+      "date": "2026-06-03",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-9",
+      "employeeId": "e1",
+      "date": "2026-06-02",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e1-10",
+      "employeeId": "e1",
+      "date": "2026-06-01",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-13",
+      "employeeId": "e1",
+      "date": "2026-05-29",
+      "checkIn": "09:00",
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
+    },
+    {
+      "id": "a-e1-14",
+      "employeeId": "e1",
+      "date": "2026-05-28",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-15",
+      "employeeId": "e1",
+      "date": "2026-05-27",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-16",
+      "employeeId": "e1",
+      "date": "2026-05-26",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e1-17",
+      "employeeId": "e1",
+      "date": "2026-05-25",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-20",
+      "employeeId": "e1",
+      "date": "2026-05-22",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-21",
+      "employeeId": "e1",
+      "date": "2026-05-21",
+      "checkIn": "09:00",
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
+    },
+    {
+      "id": "a-e1-22",
+      "employeeId": "e1",
+      "date": "2026-05-20",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
+    },
+    {
+      "id": "a-e1-23",
+      "employeeId": "e1",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-24",
+      "employeeId": "e1",
+      "date": "2026-05-18",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-27",
+      "employeeId": "e1",
+      "date": "2026-05-15",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-28",
+      "employeeId": "e1",
+      "date": "2026-05-14",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e1-29",
+      "employeeId": "e1",
+      "date": "2026-05-13",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-0",
+      "employeeId": "e2",
+      "date": "2026-06-11",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-1",
+      "employeeId": "e2",
+      "date": "2026-06-10",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-2",
+      "employeeId": "e2",
+      "date": "2026-06-09",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-3",
+      "employeeId": "e2",
+      "date": "2026-06-08",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-6",
+      "employeeId": "e2",
+      "date": "2026-06-05",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-7",
+      "employeeId": "e2",
+      "date": "2026-06-04",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e2-8",
+      "employeeId": "e2",
+      "date": "2026-06-03",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-9",
+      "employeeId": "e2",
+      "date": "2026-06-02",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e2-10",
+      "employeeId": "e2",
+      "date": "2026-06-01",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-13",
+      "employeeId": "e2",
+      "date": "2026-05-29",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-14",
+      "employeeId": "e2",
+      "date": "2026-05-28",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
+    },
+    {
+      "id": "a-e2-15",
+      "employeeId": "e2",
+      "date": "2026-05-27",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-16",
+      "employeeId": "e2",
+      "date": "2026-05-26",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-17",
+      "employeeId": "e2",
+      "date": "2026-05-25",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
+    },
+    {
+      "id": "a-e2-20",
+      "employeeId": "e2",
+      "date": "2026-05-22",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-21",
+      "employeeId": "e2",
+      "date": "2026-05-21",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-22",
+      "employeeId": "e2",
+      "date": "2026-05-20",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e2-23",
+      "employeeId": "e2",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-24",
+      "employeeId": "e2",
+      "date": "2026-05-18",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-27",
+      "employeeId": "e2",
+      "date": "2026-05-15",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e2-28",
+      "employeeId": "e2",
+      "date": "2026-05-14",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e2-29",
+      "employeeId": "e2",
+      "date": "2026-05-13",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e3-0",
+      "employeeId": "e3",
+      "date": "2026-06-11",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-1",
+      "employeeId": "e3",
+      "date": "2026-06-10",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e3-2",
+      "employeeId": "e3",
+      "date": "2026-06-09",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-3",
+      "employeeId": "e3",
+      "date": "2026-06-08",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-6",
+      "employeeId": "e3",
+      "date": "2026-06-05",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-7",
+      "employeeId": "e3",
+      "date": "2026-06-04",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-8",
+      "employeeId": "e3",
+      "date": "2026-06-03",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-9",
+      "employeeId": "e3",
+      "date": "2026-06-02",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e3-10",
+      "employeeId": "e3",
+      "date": "2026-06-01",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e3-13",
+      "employeeId": "e3",
+      "date": "2026-05-29",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e3-14",
+      "employeeId": "e3",
+      "date": "2026-05-28",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-15",
+      "employeeId": "e3",
+      "date": "2026-05-27",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-16",
+      "employeeId": "e3",
+      "date": "2026-05-26",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-17",
+      "employeeId": "e3",
+      "date": "2026-05-25",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-20",
+      "employeeId": "e3",
+      "date": "2026-05-22",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-21",
+      "employeeId": "e3",
+      "date": "2026-05-21",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-22",
+      "employeeId": "e3",
+      "date": "2026-05-20",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-23",
+      "employeeId": "e3",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-24",
+      "employeeId": "e3",
+      "date": "2026-05-18",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-27",
+      "employeeId": "e3",
+      "date": "2026-05-15",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e3-28",
+      "employeeId": "e3",
+      "date": "2026-05-14",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e3-29",
+      "employeeId": "e3",
+      "date": "2026-05-13",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e4-0",
+      "employeeId": "e4",
+      "date": "2026-06-11",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-1",
+      "employeeId": "e4",
+      "date": "2026-06-10",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-2",
+      "employeeId": "e4",
+      "date": "2026-06-09",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-3",
+      "employeeId": "e4",
+      "date": "2026-06-08",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-6",
+      "employeeId": "e4",
+      "date": "2026-06-05",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-7",
+      "employeeId": "e4",
+      "date": "2026-06-04",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-8",
+      "employeeId": "e4",
+      "date": "2026-06-03",
+      "checkIn": "09:00",
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
+    },
+    {
+      "id": "a-e4-9",
+      "employeeId": "e4",
+      "date": "2026-06-02",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-10",
+      "employeeId": "e4",
+      "date": "2026-06-01",
+      "checkIn": "09:00",
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
+    },
+    {
+      "id": "a-e4-13",
+      "employeeId": "e4",
+      "date": "2026-05-29",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-14",
+      "employeeId": "e4",
+      "date": "2026-05-28",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-15",
+      "employeeId": "e4",
+      "date": "2026-05-27",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-16",
+      "employeeId": "e4",
+      "date": "2026-05-26",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-17",
+      "employeeId": "e4",
+      "date": "2026-05-25",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-20",
+      "employeeId": "e4",
+      "date": "2026-05-22",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-21",
+      "employeeId": "e4",
+      "date": "2026-05-21",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-22",
+      "employeeId": "e4",
+      "date": "2026-05-20",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-23",
+      "employeeId": "e4",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-24",
+      "employeeId": "e4",
+      "date": "2026-05-18",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-27",
+      "employeeId": "e4",
+      "date": "2026-05-15",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-28",
+      "employeeId": "e4",
+      "date": "2026-05-14",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e4-29",
+      "employeeId": "e4",
+      "date": "2026-05-13",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-0",
+      "employeeId": "e5",
+      "date": "2026-06-11",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-1",
+      "employeeId": "e5",
+      "date": "2026-06-10",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-2",
+      "employeeId": "e5",
+      "date": "2026-06-09",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-3",
+      "employeeId": "e5",
+      "date": "2026-06-08",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e5-6",
+      "employeeId": "e5",
+      "date": "2026-06-05",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-7",
+      "employeeId": "e5",
+      "date": "2026-06-04",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-8",
+      "employeeId": "e5",
+      "date": "2026-06-03",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-9",
+      "employeeId": "e5",
+      "date": "2026-06-02",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-10",
+      "employeeId": "e5",
+      "date": "2026-06-01",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-13",
+      "employeeId": "e5",
+      "date": "2026-05-29",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-14",
+      "employeeId": "e5",
+      "date": "2026-05-28",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-15",
+      "employeeId": "e5",
+      "date": "2026-05-27",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-16",
+      "employeeId": "e5",
+      "date": "2026-05-26",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-17",
+      "employeeId": "e5",
+      "date": "2026-05-25",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-20",
+      "employeeId": "e5",
+      "date": "2026-05-22",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-21",
+      "employeeId": "e5",
+      "date": "2026-05-21",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-22",
+      "employeeId": "e5",
+      "date": "2026-05-20",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-23",
+      "employeeId": "e5",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-24",
+      "employeeId": "e5",
+      "date": "2026-05-18",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e5-27",
+      "employeeId": "e5",
+      "date": "2026-05-15",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-28",
+      "employeeId": "e5",
+      "date": "2026-05-14",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e5-29",
+      "employeeId": "e5",
+      "date": "2026-05-13",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e6-0",
+      "employeeId": "e6",
+      "date": "2026-06-11",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-1",
+      "employeeId": "e6",
+      "date": "2026-06-10",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-2",
+      "employeeId": "e6",
+      "date": "2026-06-09",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-3",
+      "employeeId": "e6",
+      "date": "2026-06-08",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-6",
+      "employeeId": "e6",
+      "date": "2026-06-05",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-7",
+      "employeeId": "e6",
+      "date": "2026-06-04",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
+    },
+    {
+      "id": "a-e6-8",
+      "employeeId": "e6",
+      "date": "2026-06-03",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-9",
+      "employeeId": "e6",
+      "date": "2026-06-02",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-10",
+      "employeeId": "e6",
+      "date": "2026-06-01",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-13",
+      "employeeId": "e6",
+      "date": "2026-05-29",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-14",
+      "employeeId": "e6",
+      "date": "2026-05-28",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-15",
+      "employeeId": "e6",
+      "date": "2026-05-27",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-16",
+      "employeeId": "e6",
+      "date": "2026-05-26",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-17",
+      "employeeId": "e6",
+      "date": "2026-05-25",
+      "checkIn": "09:00",
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
+    },
+    {
+      "id": "a-e6-20",
+      "employeeId": "e6",
+      "date": "2026-05-22",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e6-21",
+      "employeeId": "e6",
+      "date": "2026-05-21",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-22",
+      "employeeId": "e6",
+      "date": "2026-05-20",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
+    },
+    {
+      "id": "a-e6-23",
+      "employeeId": "e6",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-24",
+      "employeeId": "e6",
+      "date": "2026-05-18",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-27",
+      "employeeId": "e6",
+      "date": "2026-05-15",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e6-28",
+      "employeeId": "e6",
+      "date": "2026-05-14",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e6-29",
+      "employeeId": "e6",
+      "date": "2026-05-13",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-0",
+      "employeeId": "e7",
+      "date": "2026-06-11",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-1",
+      "employeeId": "e7",
+      "date": "2026-06-10",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-2",
+      "employeeId": "e7",
+      "date": "2026-06-09",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-3",
+      "employeeId": "e7",
+      "date": "2026-06-08",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-6",
+      "employeeId": "e7",
+      "date": "2026-06-05",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-7",
+      "employeeId": "e7",
+      "date": "2026-06-04",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e7-8",
+      "employeeId": "e7",
+      "date": "2026-06-03",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e7-9",
+      "employeeId": "e7",
+      "date": "2026-06-02",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e7-10",
+      "employeeId": "e7",
+      "date": "2026-06-01",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-13",
+      "employeeId": "e7",
+      "date": "2026-05-29",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-14",
+      "employeeId": "e7",
+      "date": "2026-05-28",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-15",
+      "employeeId": "e7",
+      "date": "2026-05-27",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-16",
+      "employeeId": "e7",
+      "date": "2026-05-26",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-17",
+      "employeeId": "e7",
+      "date": "2026-05-25",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-20",
+      "employeeId": "e7",
+      "date": "2026-05-22",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e7-21",
+      "employeeId": "e7",
+      "date": "2026-05-21",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e7-22",
+      "employeeId": "e7",
+      "date": "2026-05-20",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-23",
+      "employeeId": "e7",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-24",
+      "employeeId": "e7",
+      "date": "2026-05-18",
+      "checkIn": "09:00",
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
+    },
+    {
+      "id": "a-e7-27",
+      "employeeId": "e7",
+      "date": "2026-05-15",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e7-28",
+      "employeeId": "e7",
+      "date": "2026-05-14",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e7-29",
+      "employeeId": "e7",
+      "date": "2026-05-13",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e8-0",
+      "employeeId": "e8",
+      "date": "2026-06-11",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-1",
+      "employeeId": "e8",
+      "date": "2026-06-10",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-2",
+      "employeeId": "e8",
+      "date": "2026-06-09",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-3",
+      "employeeId": "e8",
+      "date": "2026-06-08",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-6",
+      "employeeId": "e8",
+      "date": "2026-06-05",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
+    },
+    {
+      "id": "a-e8-7",
+      "employeeId": "e8",
+      "date": "2026-06-04",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-8",
+      "employeeId": "e8",
+      "date": "2026-06-03",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e8-9",
+      "employeeId": "e8",
+      "date": "2026-06-02",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e8-10",
+      "employeeId": "e8",
+      "date": "2026-06-01",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-13",
+      "employeeId": "e8",
+      "date": "2026-05-29",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-14",
+      "employeeId": "e8",
+      "date": "2026-05-28",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-15",
+      "employeeId": "e8",
+      "date": "2026-05-27",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e8-16",
+      "employeeId": "e8",
+      "date": "2026-05-26",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-17",
+      "employeeId": "e8",
+      "date": "2026-05-25",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-20",
+      "employeeId": "e8",
+      "date": "2026-05-22",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-21",
+      "employeeId": "e8",
+      "date": "2026-05-21",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-22",
+      "employeeId": "e8",
+      "date": "2026-05-20",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-23",
+      "employeeId": "e8",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-24",
+      "employeeId": "e8",
+      "date": "2026-05-18",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-27",
+      "employeeId": "e8",
+      "date": "2026-05-15",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e8-28",
+      "employeeId": "e8",
+      "date": "2026-05-14",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e8-29",
+      "employeeId": "e8",
+      "date": "2026-05-13",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-0",
+      "employeeId": "e9",
+      "date": "2026-06-11",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e9-1",
+      "employeeId": "e9",
+      "date": "2026-06-10",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-2",
+      "employeeId": "e9",
+      "date": "2026-06-09",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e9-3",
+      "employeeId": "e9",
+      "date": "2026-06-08",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e9-6",
+      "employeeId": "e9",
+      "date": "2026-06-05",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-7",
+      "employeeId": "e9",
+      "date": "2026-06-04",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-8",
+      "employeeId": "e9",
+      "date": "2026-06-03",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-9",
+      "employeeId": "e9",
+      "date": "2026-06-02",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-10",
+      "employeeId": "e9",
+      "date": "2026-06-01",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-13",
+      "employeeId": "e9",
+      "date": "2026-05-29",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-14",
+      "employeeId": "e9",
+      "date": "2026-05-28",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-15",
+      "employeeId": "e9",
+      "date": "2026-05-27",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-16",
+      "employeeId": "e9",
+      "date": "2026-05-26",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-17",
+      "employeeId": "e9",
+      "date": "2026-05-25",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-20",
+      "employeeId": "e9",
+      "date": "2026-05-22",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-21",
+      "employeeId": "e9",
+      "date": "2026-05-21",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-22",
+      "employeeId": "e9",
+      "date": "2026-05-20",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-23",
+      "employeeId": "e9",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-24",
+      "employeeId": "e9",
+      "date": "2026-05-18",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-27",
+      "employeeId": "e9",
+      "date": "2026-05-15",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-28",
+      "employeeId": "e9",
+      "date": "2026-05-14",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e9-29",
+      "employeeId": "e9",
+      "date": "2026-05-13",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-0",
+      "employeeId": "e10",
+      "date": "2026-06-11",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
+    },
+    {
+      "id": "a-e10-1",
+      "employeeId": "e10",
+      "date": "2026-06-10",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-2",
+      "employeeId": "e10",
+      "date": "2026-06-09",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-3",
+      "employeeId": "e10",
+      "date": "2026-06-08",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-6",
+      "employeeId": "e10",
+      "date": "2026-06-05",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-7",
+      "employeeId": "e10",
+      "date": "2026-06-04",
+      "checkIn": "09:00",
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
+    },
+    {
+      "id": "a-e10-8",
+      "employeeId": "e10",
+      "date": "2026-06-03",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-9",
+      "employeeId": "e10",
+      "date": "2026-06-02",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e10-10",
+      "employeeId": "e10",
+      "date": "2026-06-01",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e10-13",
+      "employeeId": "e10",
+      "date": "2026-05-29",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
+    },
+    {
+      "id": "a-e10-14",
+      "employeeId": "e10",
+      "date": "2026-05-28",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
+    },
+    {
+      "id": "a-e10-15",
+      "employeeId": "e10",
+      "date": "2026-05-27",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-16",
+      "employeeId": "e10",
+      "date": "2026-05-26",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-17",
+      "employeeId": "e10",
+      "date": "2026-05-25",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-20",
+      "employeeId": "e10",
+      "date": "2026-05-22",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-21",
+      "employeeId": "e10",
+      "date": "2026-05-21",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-22",
+      "employeeId": "e10",
+      "date": "2026-05-20",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-23",
+      "employeeId": "e10",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-24",
+      "employeeId": "e10",
+      "date": "2026-05-18",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-27",
+      "employeeId": "e10",
+      "date": "2026-05-15",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-28",
+      "employeeId": "e10",
+      "date": "2026-05-14",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e10-29",
+      "employeeId": "e10",
+      "date": "2026-05-13",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "leave",
+      "hours": 0
+    },
+    {
+      "id": "a-e11-0",
+      "employeeId": "e11",
+      "date": "2026-06-11",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-1",
+      "employeeId": "e11",
+      "date": "2026-06-10",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-2",
+      "employeeId": "e11",
+      "date": "2026-06-09",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-3",
+      "employeeId": "e11",
+      "date": "2026-06-08",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-6",
+      "employeeId": "e11",
+      "date": "2026-06-05",
+      "checkIn": "09:00",
+      "checkOut": "13:00",
+      "status": "half_day",
+      "hours": 4
+    },
+    {
+      "id": "a-e11-7",
+      "employeeId": "e11",
+      "date": "2026-06-04",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e11-8",
+      "employeeId": "e11",
+      "date": "2026-06-03",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-9",
+      "employeeId": "e11",
+      "date": "2026-06-02",
+      "checkIn": "09:45",
+      "checkOut": "18:00",
+      "status": "late",
+      "hours": 8.25
+    },
+    {
+      "id": "a-e11-10",
+      "employeeId": "e11",
+      "date": "2026-06-01",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-13",
+      "employeeId": "e11",
+      "date": "2026-05-29",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-14",
+      "employeeId": "e11",
+      "date": "2026-05-28",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-15",
+      "employeeId": "e11",
+      "date": "2026-05-27",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-16",
+      "employeeId": "e11",
+      "date": "2026-05-26",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-17",
+      "employeeId": "e11",
+      "date": "2026-05-25",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-20",
+      "employeeId": "e11",
+      "date": "2026-05-22",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-21",
+      "employeeId": "e11",
+      "date": "2026-05-21",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-22",
+      "employeeId": "e11",
+      "date": "2026-05-20",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-23",
+      "employeeId": "e11",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-24",
+      "employeeId": "e11",
+      "date": "2026-05-18",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-27",
+      "employeeId": "e11",
+      "date": "2026-05-15",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-28",
+      "employeeId": "e11",
+      "date": "2026-05-14",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e11-29",
+      "employeeId": "e11",
+      "date": "2026-05-13",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-0",
+      "employeeId": "e12",
+      "date": "2026-06-11",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-1",
+      "employeeId": "e12",
+      "date": "2026-06-10",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-2",
+      "employeeId": "e12",
+      "date": "2026-06-09",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-3",
+      "employeeId": "e12",
+      "date": "2026-06-08",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-6",
+      "employeeId": "e12",
+      "date": "2026-06-05",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-7",
+      "employeeId": "e12",
+      "date": "2026-06-04",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-8",
+      "employeeId": "e12",
+      "date": "2026-06-03",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-9",
+      "employeeId": "e12",
+      "date": "2026-06-02",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-10",
+      "employeeId": "e12",
+      "date": "2026-06-01",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-13",
+      "employeeId": "e12",
+      "date": "2026-05-29",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-14",
+      "employeeId": "e12",
+      "date": "2026-05-28",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-15",
+      "employeeId": "e12",
+      "date": "2026-05-27",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-16",
+      "employeeId": "e12",
+      "date": "2026-05-26",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-17",
+      "employeeId": "e12",
+      "date": "2026-05-25",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-20",
+      "employeeId": "e12",
+      "date": "2026-05-22",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-21",
+      "employeeId": "e12",
+      "date": "2026-05-21",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-22",
+      "employeeId": "e12",
+      "date": "2026-05-20",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-23",
+      "employeeId": "e12",
+      "date": "2026-05-19",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-24",
+      "employeeId": "e12",
+      "date": "2026-05-18",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-27",
+      "employeeId": "e12",
+      "date": "2026-05-15",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    },
+    {
+      "id": "a-e12-28",
+      "employeeId": "e12",
+      "date": "2026-05-14",
+      "checkIn": null,
+      "checkOut": null,
+      "status": "absent",
+      "hours": 0
+    },
+    {
+      "id": "a-e12-29",
+      "employeeId": "e12",
+      "date": "2026-05-13",
+      "checkIn": "09:00",
+      "checkOut": "18:00",
+      "status": "present",
+      "hours": 9
+    }
+  ],
+  "leaveRequests": [
+    {
+      "id": "l1",
+      "employeeId": "e10",
+      "type": "annual",
+      "startDate": "2026-06-13",
+      "endDate": "2026-06-18",
+      "days": 5,
+      "reason": "Family wedding out of country.",
+      "status": "approved",
+      "appliedAt": "2026-06-01"
+    },
+    {
+      "id": "l2",
+      "employeeId": "e4",
+      "type": "sick",
+      "startDate": "2026-06-08",
+      "endDate": "2026-06-09",
+      "days": 2,
+      "reason": "Flu and fever.",
+      "status": "approved",
+      "appliedAt": "2026-06-07"
+    },
+    {
+      "id": "l3",
+      "employeeId": "e6",
+      "type": "casual",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-16",
+      "days": 1,
+      "reason": "Personal errand.",
+      "status": "pending",
+      "appliedAt": "2026-06-10"
+    },
+    {
+      "id": "l4",
+      "employeeId": "e8",
+      "type": "emergency",
+      "startDate": "2026-06-12",
+      "endDate": "2026-06-12",
+      "days": 1,
+      "reason": "Family emergency.",
+      "status": "pending",
+      "appliedAt": "2026-06-11"
+    },
+    {
+      "id": "l5",
+      "employeeId": "e11",
+      "type": "annual",
+      "startDate": "2026-06-26",
+      "endDate": "2026-06-29",
+      "days": 3,
+      "reason": "Short vacation.",
+      "status": "pending",
+      "appliedAt": "2026-06-09"
+    },
+    {
+      "id": "l6",
+      "employeeId": "e12",
+      "type": "sick",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-03",
+      "days": 1,
+      "reason": "Migraine.",
+      "status": "rejected",
+      "appliedAt": "2026-06-02"
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "name": "Nimbus Banking Portal",
+      "client": "Meezan Digital",
+      "status": "active",
+      "progress": 68,
+      "startDate": "2026-02-11",
+      "deadline": "2026-07-26",
+      "budget": 8500000,
+      "memberIds": [
+        "e1",
+        "e2",
+        "e4",
+        "e11"
+      ]
+    },
+    {
+      "id": "p2",
+      "name": "Helio Retail OS",
+      "client": "Imtiaz Group",
+      "status": "active",
+      "progress": 42,
+      "startDate": "2026-03-23",
+      "deadline": "2026-08-10",
+      "budget": 6200000,
+      "memberIds": [
+        "e5",
+        "e6",
+        "e12"
+      ]
+    },
+    {
+      "id": "p3",
+      "name": "Atlas CRM Migration",
+      "client": "TPL Insurance",
+      "status": "planning",
+      "progress": 8,
+      "startDate": "2026-06-18",
+      "deadline": "2026-12-08",
+      "budget": 4400000,
+      "memberIds": [
+        "e2",
+        "e9"
+      ]
+    },
+    {
+      "id": "p4",
+      "name": "Quantum Logistics Tracker",
+      "client": "TCS Express",
+      "status": "on_hold",
+      "progress": 30,
+      "startDate": "2025-11-23",
+      "deadline": "2026-07-11",
+      "budget": 5100000,
+      "memberIds": [
+        "e4",
+        "e10"
+      ]
+    },
+    {
+      "id": "p5",
+      "name": "Vertex Design System v2",
+      "client": "Internal",
+      "status": "completed",
+      "progress": 100,
+      "startDate": "2025-05-27",
+      "deadline": "2026-05-22",
+      "budget": 1800000,
+      "memberIds": [
+        "e5",
+        "e6",
+        "e1"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t1",
+      "title": "Build transaction ledger UI",
+      "projectId": "p1",
+      "assigneeId": "e1",
+      "priority": "high",
+      "status": "in_progress",
+      "deadline": "2026-06-16",
+      "createdAt": "2026-05-30"
+    },
+    {
+      "id": "t2",
+      "title": "Implement OAuth flow",
+      "projectId": "p1",
+      "assigneeId": "e4",
+      "priority": "critical",
+      "status": "review",
+      "deadline": "2026-06-13",
+      "createdAt": "2026-05-24"
+    },
+    {
+      "id": "t3",
+      "title": "Regression test suite",
+      "projectId": "p1",
+      "assigneeId": "e11",
+      "priority": "medium",
+      "status": "todo",
+      "deadline": "2026-06-23",
+      "createdAt": "2026-06-08"
+    },
+    {
+      "id": "t4",
+      "title": "POS checkout redesign",
+      "projectId": "p2",
+      "assigneeId": "e5",
+      "priority": "high",
+      "status": "in_progress",
+      "deadline": "2026-06-19",
+      "createdAt": "2026-06-02"
+    },
+    {
+      "id": "t5",
+      "title": "Inventory sync service",
+      "projectId": "p2",
+      "assigneeId": "e12",
+      "priority": "medium",
+      "status": "todo",
+      "deadline": "2026-07-01",
+      "createdAt": "2026-06-07"
+    },
+    {
+      "id": "t6",
+      "title": "Discovery workshop notes",
+      "projectId": "p3",
+      "assigneeId": "e2",
+      "priority": "low",
+      "status": "done",
+      "deadline": "2026-06-09",
+      "createdAt": "2026-06-05"
+    },
+    {
+      "id": "t7",
+      "title": "Fleet GPS data model",
+      "projectId": "p4",
+      "assigneeId": "e4",
+      "priority": "high",
+      "status": "todo",
+      "deadline": "2026-06-26",
+      "createdAt": "2026-06-03"
+    },
+    {
+      "id": "t8",
+      "title": "Final QA sign-off",
+      "projectId": "p5",
+      "assigneeId": "e11",
+      "priority": "critical",
+      "status": "done",
+      "deadline": "2026-05-17",
+      "createdAt": "2026-05-02"
+    },
+    {
+      "id": "t9",
+      "title": "Onboarding deck refresh",
+      "projectId": "p5",
+      "assigneeId": "e6",
+      "priority": "low",
+      "status": "review",
+      "deadline": "2026-06-14",
+      "createdAt": "2026-06-04"
+    }
+  ],
+  "assets": [
+    {
+      "id": "as1",
+      "tag": "CVS-LT-014",
+      "name": "MacBook Pro 16\" M3 Max",
+      "category": "laptop",
+      "serial": "C02XY3JKLM01",
+      "status": "assigned",
+      "assignedTo": "e1",
+      "purchaseDate": "2025-04-17",
+      "value": 950000
+    },
+    {
+      "id": "as2",
+      "tag": "CVS-LT-015",
+      "name": "Dell XPS 15",
+      "category": "laptop",
+      "serial": "DXPS15-9982",
+      "status": "assigned",
+      "assignedTo": "e4",
+      "purchaseDate": "2025-09-04",
+      "value": 480000
+    },
+    {
+      "id": "as3",
+      "tag": "CVS-MN-022",
+      "name": "LG UltraFine 27\" 4K",
+      "category": "monitor",
+      "serial": "LGUF27-1471",
+      "status": "assigned",
+      "assignedTo": "e1",
+      "purchaseDate": "2025-05-27",
+      "value": 165000
+    },
+    {
+      "id": "as4",
+      "tag": "CVS-HS-007",
+      "name": "Sony WH-1000XM5",
+      "category": "headset",
+      "serial": "SNYXM5-0091",
+      "status": "available",
+      "assignedTo": null,
+      "purchaseDate": "2026-02-11",
+      "value": 95000
+    },
+    {
+      "id": "as5",
+      "tag": "CVS-KB-031",
+      "name": "Keychron K8 Pro",
+      "category": "keyboard",
+      "serial": "KCK8P-3310",
+      "status": "assigned",
+      "assignedTo": "e5",
+      "purchaseDate": "2025-11-23",
+      "value": 38000
+    },
+    {
+      "id": "as6",
+      "tag": "CVS-LT-016",
+      "name": "ThinkPad X1 Carbon",
+      "category": "laptop",
+      "serial": "TPX1C-2240",
+      "status": "maintenance",
+      "assignedTo": null,
+      "purchaseDate": "2024-09-29",
+      "value": 410000
+    },
+    {
+      "id": "as7",
+      "tag": "CVS-FN-003",
+      "name": "Ergonomic Standing Desk",
+      "category": "furniture",
+      "serial": "ERG-STD-003",
+      "status": "assigned",
+      "assignedTo": "e2",
+      "purchaseDate": "2024-12-18",
+      "value": 120000
+    },
+    {
+      "id": "as8",
+      "tag": "CVS-MS-018",
+      "name": "Logitech MX Master 3S",
+      "category": "mouse",
+      "serial": "LMX3S-7811",
+      "status": "available",
+      "assignedTo": null,
+      "purchaseDate": "2026-04-12",
+      "value": 32000
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc1",
+      "name": "Employment Contract — Ayesha Khan.pdf",
+      "type": "contract",
+      "employeeId": "e1",
+      "uploadedAt": "2024-12-18",
+      "sizeKb": 412
+    },
+    {
+      "id": "doc2",
+      "name": "AWS Solutions Architect Cert.pdf",
+      "type": "certificate",
+      "employeeId": "e4",
+      "uploadedAt": "2026-04-12",
+      "sizeKb": 880
+    },
+    {
+      "id": "doc3",
+      "name": "Offer Letter — Daniyal Saeed.pdf",
+      "type": "offer_letter",
+      "employeeId": "e12",
+      "uploadedAt": "2026-03-08",
+      "sizeKb": 220
+    },
+    {
+      "id": "doc4",
+      "name": "CNIC Copy — Mariam Yousuf.jpg",
+      "type": "id",
+      "employeeId": "e5",
+      "uploadedAt": "2024-07-31",
+      "sizeKb": 1450
+    },
+    {
+      "id": "doc5",
+      "name": "NDA — Nimbus Project.pdf",
+      "type": "contract",
+      "employeeId": "e2",
+      "uploadedAt": "2026-02-01",
+      "sizeKb": 318
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n1",
+      "title": "Leave request pending",
+      "body": "Usman Riaz requested 1 day of casual leave.",
+      "kind": "leave",
+      "unread": true,
+      "createdAt": "2026-06-11"
+    },
+    {
+      "id": "n2",
+      "title": "Task overdue",
+      "body": "‘Fleet GPS data model’ is past its deadline.",
+      "kind": "task",
+      "unread": true,
+      "createdAt": "2026-06-11"
+    },
+    {
+      "id": "n3",
+      "title": "Attendance anomaly",
+      "body": "3 late check-ins this week in Engineering.",
+      "kind": "attendance",
+      "unread": true,
+      "createdAt": "2026-06-10"
+    },
+    {
+      "id": "n4",
+      "title": "Project milestone reached",
+      "body": "Vertex Design System v2 marked completed.",
+      "kind": "project",
+      "unread": false,
+      "createdAt": "2026-06-08"
+    },
+    {
+      "id": "n5",
+      "title": "New employee onboarded",
+      "body": "Daniyal Saeed joined Engineering.",
+      "kind": "system",
+      "unread": false,
+      "createdAt": "2026-03-13"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "au-1781172832392-7fwm",
+      "actor": "Admin Vertex",
+      "action": "LOGIN",
+      "target": "Workplace login",
+      "timestamp": "2026-06-11T10:13:52.392Z",
+      "ip": "—"
+    },
+    {
+      "id": "au1",
+      "actor": "Sana Mirza",
+      "action": "UPDATE",
+      "target": "Employee e6 — status changed to probation",
+      "timestamp": "2026-06-10T10:13:52.334Z",
+      "ip": "203.99.12.41"
+    },
+    {
+      "id": "au2",
+      "actor": "Bilal Ahmed",
+      "action": "CREATE",
+      "target": "Project p3 — Atlas CRM Migration",
+      "timestamp": "2026-06-04T10:13:52.334Z",
+      "ip": "39.45.198.10"
+    },
+    {
+      "id": "au3",
+      "actor": "Admin",
+      "action": "LOGIN",
+      "target": "Admin console",
+      "timestamp": "2026-06-11T10:13:52.334Z",
+      "ip": "10.0.0.4"
+    },
+    {
+      "id": "au4",
+      "actor": "Nimra Hassan",
+      "action": "DELETE",
+      "target": "Asset as9 — retired projector",
+      "timestamp": "2026-06-09T10:13:52.334Z",
+      "ip": "182.180.4.22"
+    },
+    {
+      "id": "au5",
+      "actor": "Zara Sheikh",
+      "action": "UPDATE",
+      "target": "Leave l4 — approved",
+      "timestamp": "2026-06-11T10:13:52.334Z",
+      "ip": "39.45.10.7"
+    },
+    {
+      "id": "au6",
+      "actor": "System",
+      "action": "ROLE_CHANGE",
+      "target": "User e3 granted hr_lead permissions",
+      "timestamp": "2026-05-12T10:13:52.334Z",
+      "ip": "—"
+    }
+  ],
+  "credentials": [
+    {
+      "email": "admin@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "ayesha.khan@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "bilal.ahmed@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "sana.mirza@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "hamza.tariq@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "mariam.yousuf@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "usman.riaz@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "zara.sheikh@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "faisal.iqbal@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "nimra.hassan@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "omer.sultan@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "rabia.noor@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    },
+    {
+      "email": "daniyal.saeed@codevertex.io",
+      "passwordHash": "4a6cef1d3e13371472e752dfc97adbc1:13e06fbdba59237ab8a7d0ccb8695faf5738e2d165acffbfd3ad860c87d134c7d2cac65ac3cfac6adf3d7343ee56ce55a5985ea1be6f4746d6db88f0935463f7"
+    }
+  ]
+}

@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AppRouteImport } from './routes/_app'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthIndexRouteImport } from './routes/auth.index'
 import { Route as AuthSignupRouteImport } from './routes/auth.signup'
 import { Route as AuthForgotRouteImport } from './routes/auth.forgot'
 import { Route as AppTasksRouteImport } from './routes/_app.tasks'
@@ -42,6 +43,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AuthIndexRoute = AuthIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AuthRoute,
 } as any)
 const AuthSignupRoute = AuthSignupRouteImport.update({
   id: '/signup',
@@ -142,11 +148,11 @@ export interface FileRoutesByFullPath {
   '/tasks': typeof AppTasksRoute
   '/auth/forgot': typeof AuthForgotRoute
   '/auth/signup': typeof AuthSignupRoute
+  '/auth/': typeof AuthIndexRoute
   '/employees/$id': typeof AppEmployeesIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/auth': typeof AuthRouteWithChildren
   '/assets': typeof AppAssetsRoute
   '/attendance': typeof AppAttendanceRoute
   '/audit-logs': typeof AppAuditLogsRoute
@@ -162,6 +168,7 @@ export interface FileRoutesByTo {
   '/tasks': typeof AppTasksRoute
   '/auth/forgot': typeof AuthForgotRoute
   '/auth/signup': typeof AuthSignupRoute
+  '/auth': typeof AuthIndexRoute
   '/employees/$id': typeof AppEmployeesIdRoute
 }
 export interface FileRoutesById {
@@ -184,6 +191,7 @@ export interface FileRoutesById {
   '/_app/tasks': typeof AppTasksRoute
   '/auth/forgot': typeof AuthForgotRoute
   '/auth/signup': typeof AuthSignupRoute
+  '/auth/': typeof AuthIndexRoute
   '/_app/employees/$id': typeof AppEmployeesIdRoute
 }
 export interface FileRouteTypes {
@@ -206,11 +214,11 @@ export interface FileRouteTypes {
     | '/tasks'
     | '/auth/forgot'
     | '/auth/signup'
+    | '/auth/'
     | '/employees/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/auth'
     | '/assets'
     | '/attendance'
     | '/audit-logs'
@@ -226,6 +234,7 @@ export interface FileRouteTypes {
     | '/tasks'
     | '/auth/forgot'
     | '/auth/signup'
+    | '/auth'
     | '/employees/$id'
   id:
     | '__root__'
@@ -247,6 +256,7 @@ export interface FileRouteTypes {
     | '/_app/tasks'
     | '/auth/forgot'
     | '/auth/signup'
+    | '/auth/'
     | '/_app/employees/$id'
   fileRoutesById: FileRoutesById
 }
@@ -278,6 +288,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/auth/': {
+      id: '/auth/'
+      path: '/'
+      fullPath: '/auth/'
+      preLoaderRoute: typeof AuthIndexRouteImport
+      parentRoute: typeof AuthRoute
     }
     '/auth/signup': {
       id: '/auth/signup'
@@ -443,11 +460,13 @@ const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 interface AuthRouteChildren {
   AuthForgotRoute: typeof AuthForgotRoute
   AuthSignupRoute: typeof AuthSignupRoute
+  AuthIndexRoute: typeof AuthIndexRoute
 }
 
 const AuthRouteChildren: AuthRouteChildren = {
   AuthForgotRoute: AuthForgotRoute,
   AuthSignupRoute: AuthSignupRoute,
+  AuthIndexRoute: AuthIndexRoute,
 }
 
 const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren)
