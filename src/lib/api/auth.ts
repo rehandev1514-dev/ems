@@ -49,27 +49,20 @@ function verifyPwd(pwd: string, stored: string): boolean {
   return hashPwd(pwd) === stored;
 }
 
-export async function loginUser(
-  email: string,
-  password: string
-): Promise<SessionUser> {
+export async function loginUser(email: string, password: string): Promise<SessionUser> {
   initDb();
   const db = getDb();
-  const cred = db.credentials.find(
-    (c) => c.email.toLowerCase() === email.toLowerCase()
-  );
+  const cred = db.credentials.find((c) => c.email.toLowerCase() === email.toLowerCase());
   if (!cred || !verifyPwd(password, cred.passwordHash)) {
     throw new Error("Invalid email or password");
   }
 
-  const emp = db.employees.find(
-    (e) => e.email.toLowerCase() === email.toLowerCase()
-  );
+  const emp = db.employees.find((e) => e.email.toLowerCase() === email.toLowerCase());
   if (!emp) throw new Error("Employee record not found");
 
   if (emp.status === "pending") {
     throw new Error(
-      "Your account is pending admin approval. You will be able to sign in once the admin approves your registration."
+      "Your account is pending admin approval. You will be able to sign in once the admin approves your registration.",
     );
   }
 
@@ -108,9 +101,7 @@ export async function signupUser(params: {
   initDb();
   const db = getDb();
 
-  const existing = db.employees.find(
-    (e) => e.email.toLowerCase() === params.email.toLowerCase()
-  );
+  const existing = db.employees.find((e) => e.email.toLowerCase() === params.email.toLowerCase());
   if (existing) throw new Error("Email address already registered");
 
   const id = `e-${Date.now()}`;
@@ -149,7 +140,14 @@ export async function signupUser(params: {
   saveDb(db);
 
   if (isPending) {
-    return { id, name: params.fullName, email: params.email, role: params.role, employeeId: id, isPending: true };
+    return {
+      id,
+      name: params.fullName,
+      email: params.email,
+      role: params.role,
+      employeeId: id,
+      isPending: true,
+    };
   }
 
   const user: SessionUser = {

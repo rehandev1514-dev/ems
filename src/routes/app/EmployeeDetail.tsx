@@ -10,27 +10,42 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { StatusBadge } from "@/components/ui-ext/status-badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { formatCurrency, formatDate, initials } from "@/lib/format";
-import { 
-  ArrowLeft, Mail, Phone, MapPin, Calendar, IdCard, Briefcase, 
-  Upload, Trash2, FileText, Download, Edit
+import {
+  ArrowLeft,
+  Mail,
+  Phone,
+  MapPin,
+  Calendar,
+  IdCard,
+  Briefcase,
+  Upload,
+  Trash2,
+  FileText,
+  Download,
+  Edit,
 } from "lucide-react";
 import { toast } from "sonner";
-import { 
-  getEmployeeByIdFn, 
-  getAttendanceFn, 
-  getLeavesFn, 
-  getProjectsFn, 
-  getDocumentsFn, 
-  getAssetsFn, 
+import {
+  getEmployeeByIdFn,
+  getAttendanceFn,
+  getLeavesFn,
+  getProjectsFn,
+  getDocumentsFn,
+  getAssetsFn,
   updateEmployeeFn,
   uploadDocumentFn,
-  deleteDocumentFn
+  deleteDocumentFn,
 } from "@/lib/api/app.functions";
 import type { Employee, Role, EmploymentStatus } from "@/lib/mock-data";
-
-
 
 export function EmployeeProfile() {
   const { id } = useParams();
@@ -39,7 +54,9 @@ export function EmployeeProfile() {
 
   // States
   const [isEditOpen, setIsEditOpen] = useState(false);
-  const [docType, setDocType] = useState<"contract" | "certificate" | "id" | "offer_letter" | "other">("contract");
+  const [docType, setDocType] = useState<
+    "contract" | "certificate" | "id" | "offer_letter" | "other"
+  >("contract");
   const [uploading, setUploading] = useState(false);
 
   // Edit Form State
@@ -54,11 +71,15 @@ export function EmployeeProfile() {
     designation: "",
     status: "active" as EmploymentStatus,
     salary: 0,
-    role: "employee" as Role
+    role: "employee" as Role,
   });
 
   // Queries
-  const { data: emp, isLoading: loadingEmp, error: empError } = useQuery({
+  const {
+    data: emp,
+    isLoading: loadingEmp,
+    error: empError,
+  } = useQuery({
     queryKey: ["employee", id as string],
     queryFn: async () => {
       const res = await getEmployeeByIdFn({ data: { id: id! } });
@@ -73,35 +94,35 @@ export function EmployeeProfile() {
         designation: res.designation,
         status: res.status,
         salary: res.salary,
-        role: res.role
+        role: res.role,
       });
       return res;
-    }
+    },
   });
 
   const { data: allAttendance = [] } = useQuery({
     queryKey: ["attendance"],
-    queryFn: () => getAttendanceFn()
+    queryFn: () => getAttendanceFn(),
   });
 
   const { data: allLeaves = [] } = useQuery({
     queryKey: ["leaves"],
-    queryFn: () => getLeavesFn()
+    queryFn: () => getLeavesFn(),
   });
 
   const { data: allProjects = [] } = useQuery({
     queryKey: ["projects"],
-    queryFn: () => getProjectsFn()
+    queryFn: () => getProjectsFn(),
   });
 
   const { data: allDocs = [] } = useQuery({
     queryKey: ["documents"],
-    queryFn: () => getDocumentsFn()
+    queryFn: () => getDocumentsFn(),
   });
 
   const { data: allAssets = [] } = useQuery({
     queryKey: ["assets"],
-    queryFn: () => getAssetsFn()
+    queryFn: () => getAssetsFn(),
   });
 
   // Mutations
@@ -113,21 +134,21 @@ export function EmployeeProfile() {
       toast.success("Profile updated successfully");
       setIsEditOpen(false);
     },
-    onError: (err: any) => {
+    onError: (err: Error) => {
       toast.error(err.message || "Failed to update profile");
-    }
+    },
   });
 
   const uploadDocMutation = useMutation({
-    mutationFn: (payload: { name: string; type: any; employeeId: string; fileBase64: string }) => 
+    mutationFn: (payload: { name: string; type: string; employeeId: string; fileBase64: string }) =>
       uploadDocumentFn({ data: payload }),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["documents"] });
       toast.success("Document uploaded successfully");
     },
-    onError: (err: any) => {
+    onError: (err: Error) => {
       toast.error(err.message || "Failed to upload document");
-    }
+    },
   });
 
   const deleteDocMutation = useMutation({
@@ -136,9 +157,9 @@ export function EmployeeProfile() {
       queryClient.invalidateQueries({ queryKey: ["documents"] });
       toast.success("Document deleted");
     },
-    onError: (err: any) => {
+    onError: (err: Error) => {
       toast.error(err.message || "Failed to delete document");
-    }
+    },
   });
 
   if (loadingEmp) {
@@ -173,7 +194,7 @@ export function EmployeeProfile() {
         name: file.name,
         type: docType,
         employeeId: emp.id,
-        fileBase64: base64
+        fileBase64: base64,
       });
       setUploading(false);
     };
@@ -195,7 +216,10 @@ export function EmployeeProfile() {
 
   return (
     <>
-      <Link to="/employees" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground mb-4">
+      <Link
+        to="/employees"
+        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground mb-4"
+      >
         <ArrowLeft className="size-4" /> Back to employees
       </Link>
 
@@ -203,7 +227,9 @@ export function EmployeeProfile() {
         <div className="absolute inset-x-0 top-0 h-24 gradient-primary opacity-30" />
         <div className="relative flex flex-col md:flex-row gap-6 items-start">
           <Avatar className="size-24 ring-4 ring-background shadow-elevated">
-            <AvatarFallback className="text-2xl gradient-primary text-primary-foreground font-display">{initials(emp.fullName)}</AvatarFallback>
+            <AvatarFallback className="text-2xl gradient-primary text-primary-foreground font-display">
+              {initials(emp.fullName)}
+            </AvatarFallback>
           </Avatar>
           <div className="flex-1">
             <div className="flex flex-wrap items-center gap-3">
@@ -212,11 +238,22 @@ export function EmployeeProfile() {
             </div>
             <p className="text-muted-foreground">{emp.designation}</p>
             <div className="mt-3 grid sm:grid-cols-2 gap-1.5 text-sm">
-              <div className="flex items-center gap-2"><Mail className="size-3.5 text-muted-foreground" /> {emp.email}</div>
-              <div className="flex items-center gap-2"><Phone className="size-3.5 text-muted-foreground" /> {emp.phone}</div>
-              <div className="flex items-center gap-2"><IdCard className="size-3.5 text-muted-foreground" /> {emp.cnic}</div>
-              <div className="flex items-center gap-2"><Calendar className="size-3.5 text-muted-foreground" /> Joined {formatDate(emp.joiningDate)}</div>
-              <div className="flex items-center gap-2 sm:col-span-2"><MapPin className="size-3.5 text-muted-foreground" /> {emp.address}</div>
+              <div className="flex items-center gap-2">
+                <Mail className="size-3.5 text-muted-foreground" /> {emp.email}
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="size-3.5 text-muted-foreground" /> {emp.phone}
+              </div>
+              <div className="flex items-center gap-2">
+                <IdCard className="size-3.5 text-muted-foreground" /> {emp.cnic}
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar className="size-3.5 text-muted-foreground" /> Joined{" "}
+                {formatDate(emp.joiningDate)}
+              </div>
+              <div className="flex items-center gap-2 sm:col-span-2">
+                <MapPin className="size-3.5 text-muted-foreground" /> {emp.address}
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-2">
@@ -268,19 +305,33 @@ export function EmployeeProfile() {
         <TabsContent value="attendance">
           <Card className="p-5 glass">
             <h3 className="font-display font-semibold mb-3">Last 30 days</h3>
-            {empAttendance.length === 0 ? <p className="text-sm text-muted-foreground">No attendance history.</p> : (
+            {empAttendance.length === 0 ? (
+              <p className="text-sm text-muted-foreground">No attendance history.</p>
+            ) : (
               <div className="grid grid-cols-7 gap-1.5">
                 {empAttendance.map((a) => (
-                  <div key={a.id} className="aspect-square rounded-md border border-border flex flex-col items-center justify-center text-[10px]"
+                  <div
+                    key={a.id}
+                    className="aspect-square rounded-md border border-border flex flex-col items-center justify-center text-[10px]"
                     style={{
-                      background: a.status === "present" ? "color-mix(in oklab, var(--color-success) 18%, transparent)"
-                        : a.status === "late" ? "color-mix(in oklab, var(--color-warning) 18%, transparent)"
-                        : a.status === "half_day" ? "color-mix(in oklab, var(--color-warning) 12%, transparent)"
-                        : a.status === "leave" ? "color-mix(in oklab, var(--color-info) 18%, transparent)"
-                        : a.status === "absent" ? "color-mix(in oklab, var(--color-destructive) 18%, transparent)" : undefined,
-                    }}>
+                      background:
+                        a.status === "present"
+                          ? "color-mix(in oklab, var(--color-success) 18%, transparent)"
+                          : a.status === "late"
+                            ? "color-mix(in oklab, var(--color-warning) 18%, transparent)"
+                            : a.status === "half_day"
+                              ? "color-mix(in oklab, var(--color-warning) 12%, transparent)"
+                              : a.status === "leave"
+                                ? "color-mix(in oklab, var(--color-info) 18%, transparent)"
+                                : a.status === "absent"
+                                  ? "color-mix(in oklab, var(--color-destructive) 18%, transparent)"
+                                  : undefined,
+                    }}
+                  >
                     <span className="font-medium">{new Date(a.date).getDate()}</span>
-                    <span className="text-[9px] text-muted-foreground capitalize">{a.status.replace("_", " ")}</span>
+                    <span className="text-[9px] text-muted-foreground capitalize">
+                      {a.status.replace("_", " ")}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -290,13 +341,19 @@ export function EmployeeProfile() {
 
         <TabsContent value="leaves">
           <Card className="p-5 glass">
-            {empLeaves.length === 0 ? <p className="text-sm text-muted-foreground">No leave history.</p> : (
+            {empLeaves.length === 0 ? (
+              <p className="text-sm text-muted-foreground">No leave history.</p>
+            ) : (
               <ul className="divide-y divide-border">
                 {empLeaves.map((l) => (
                   <li key={l.id} className="py-3 flex items-center gap-3">
                     <div className="flex-1">
-                      <div className="text-sm font-medium capitalize">{l.type} leave · {l.days} day{l.days > 1 ? "s" : ""}</div>
-                      <div className="text-xs text-muted-foreground">{formatDate(l.startDate)} → {formatDate(l.endDate)} · {l.reason}</div>
+                      <div className="text-sm font-medium capitalize">
+                        {l.type} leave · {l.days} day{l.days > 1 ? "s" : ""}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {formatDate(l.startDate)} → {formatDate(l.endDate)} · {l.reason}
+                      </div>
                     </div>
                     <StatusBadge status={l.status} />
                   </li>
@@ -308,14 +365,20 @@ export function EmployeeProfile() {
 
         <TabsContent value="projects">
           <Card className="p-5 glass">
-            {empProjects.length === 0 ? <p className="text-sm text-muted-foreground">Not assigned to any projects.</p> : (
+            {empProjects.length === 0 ? (
+              <p className="text-sm text-muted-foreground">Not assigned to any projects.</p>
+            ) : (
               <ul className="divide-y divide-border">
                 {empProjects.map((p) => (
                   <li key={p.id} className="py-3 flex items-center gap-3">
-                    <div className="size-9 rounded-lg bg-primary/10 flex items-center justify-center"><Briefcase className="size-4 text-primary" /></div>
+                    <div className="size-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Briefcase className="size-4 text-primary" />
+                    </div>
                     <div className="flex-1">
                       <div className="text-sm font-medium">{p.name}</div>
-                      <div className="text-xs text-muted-foreground">{p.client} · {p.progress}%</div>
+                      <div className="text-xs text-muted-foreground">
+                        {p.client} · {p.progress}%
+                      </div>
                     </div>
                     <StatusBadge status={p.status} />
                   </li>
@@ -329,12 +392,12 @@ export function EmployeeProfile() {
           <Card className="p-5 glass">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 mb-4">
               <h3 className="font-display font-semibold">Documents on File</h3>
-              
+
               {(isHRorAdmin || canEditSelf) && (
                 <div className="flex items-center gap-2">
-                  <select 
+                  <select
                     value={docType}
-                    onChange={(e) => setDocType(e.target.value as any)}
+                    onChange={(e) => setDocType(e.target.value as never)}
                     className="rounded-md border border-input bg-background px-2 h-9 text-xs"
                   >
                     <option value="contract">Contract</option>
@@ -343,33 +406,56 @@ export function EmployeeProfile() {
                     <option value="offer_letter">Offer Letter</option>
                     <option value="other">Other</option>
                   </select>
-                  <Label htmlFor="doc-upload" className="cursor-pointer inline-flex items-center justify-center rounded-md text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 px-3 h-9">
-                    <Upload className="size-3.5 mr-1" /> {uploading ? "Uploading..." : "Upload File"}
+                  <Label
+                    htmlFor="doc-upload"
+                    className="cursor-pointer inline-flex items-center justify-center rounded-md text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90 px-3 h-9"
+                  >
+                    <Upload className="size-3.5 mr-1" />{" "}
+                    {uploading ? "Uploading..." : "Upload File"}
                   </Label>
-                  <input id="doc-upload" type="file" onChange={handleFileUpload} className="hidden" />
+                  <input
+                    id="doc-upload"
+                    type="file"
+                    onChange={handleFileUpload}
+                    className="hidden"
+                  />
                 </div>
               )}
             </div>
 
-            {empDocs.length === 0 ? <p className="text-sm text-muted-foreground">No documents on file.</p> : (
+            {empDocs.length === 0 ? (
+              <p className="text-sm text-muted-foreground">No documents on file.</p>
+            ) : (
               <ul className="divide-y divide-border">
                 {empDocs.map((d) => (
                   <li key={d.id} className="py-3 flex items-center gap-3 text-sm">
                     <FileText className="size-4 text-muted-foreground" />
                     <span className="flex-1 font-medium">{d.name}</span>
-                    <span className="text-xs text-muted-foreground capitalize">{d.type.replace("_", " ")}</span>
+                    <span className="text-xs text-muted-foreground capitalize">
+                      {d.type.replace("_", " ")}
+                    </span>
                     <span className="text-xs text-muted-foreground">{d.sizeKb} KB</span>
-                    
+
                     <div className="flex gap-2">
-                      <Button size="icon" variant="ghost" className="size-8" onClick={() => toast.success("Downloading document...")}>
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        className="size-8"
+                        onClick={() => toast.success("Downloading document...")}
+                      >
                         <Download className="size-4" />
                       </Button>
                       {(isHRorAdmin || canEditSelf) && (
-                        <Button size="icon" variant="ghost" className="size-8 text-destructive" onClick={() => {
-                          if (confirm("Delete this document?")) {
-                            deleteDocMutation.mutate(d.id);
-                          }
-                        }}>
+                        <Button
+                          size="icon"
+                          variant="ghost"
+                          className="size-8 text-destructive"
+                          onClick={() => {
+                            if (confirm("Delete this document?")) {
+                              deleteDocMutation.mutate(d.id);
+                            }
+                          }}
+                        >
                           <Trash2 className="size-4" />
                         </Button>
                       )}
@@ -383,7 +469,9 @@ export function EmployeeProfile() {
 
         <TabsContent value="assets">
           <Card className="p-5 glass">
-            {empAssets.length === 0 ? <p className="text-sm text-muted-foreground">No assigned assets.</p> : (
+            {empAssets.length === 0 ? (
+              <p className="text-sm text-muted-foreground">No assigned assets.</p>
+            ) : (
               <ul className="divide-y divide-border">
                 {empAssets.map((a) => (
                   <li key={a.id} className="py-3 flex items-center gap-3 text-sm">
@@ -409,30 +497,63 @@ export function EmployeeProfile() {
             <div className="grid gap-4 py-4 max-h-[60vh] overflow-y-auto px-1">
               <div className="space-y-1">
                 <Label htmlFor="editFullName">Full Name</Label>
-                <Input id="editFullName" value={formData.fullName} onChange={(e) => setFormData({...formData, fullName: e.target.value})} required />
+                <Input
+                  id="editFullName"
+                  value={formData.fullName}
+                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                  required
+                />
               </div>
               <div className="space-y-1">
                 <Label htmlFor="editEmail">Email</Label>
-                <Input id="editEmail" type="email" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} required disabled={!isHRorAdmin} />
+                <Input
+                  id="editEmail"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
+                  disabled={!isHRorAdmin}
+                />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <Label htmlFor="editPhone">Phone</Label>
-                  <Input id="editPhone" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} required />
+                  <Input
+                    id="editPhone"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    required
+                  />
                 </div>
                 <div className="space-y-1">
                   <Label htmlFor="editCnic">CNIC</Label>
-                  <Input id="editCnic" value={formData.cnic} onChange={(e) => setFormData({...formData, cnic: e.target.value})} required disabled={!isHRorAdmin} />
+                  <Input
+                    id="editCnic"
+                    value={formData.cnic}
+                    onChange={(e) => setFormData({ ...formData, cnic: e.target.value })}
+                    required
+                    disabled={!isHRorAdmin}
+                  />
                 </div>
               </div>
               <div className="space-y-1">
                 <Label htmlFor="editAddress">Address</Label>
-                <Input id="editAddress" value={formData.address} onChange={(e) => setFormData({...formData, address: e.target.value})} required />
+                <Input
+                  id="editAddress"
+                  value={formData.address}
+                  onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                  required
+                />
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div className="space-y-1">
                   <Label htmlFor="editGender">Gender</Label>
-                  <select id="editGender" value={formData.gender} onChange={(e) => setFormData({...formData, gender: e.target.value as any})} className="w-full rounded-md border border-input bg-background px-3 h-10 text-sm">
+                  <select
+                    id="editGender"
+                    value={formData.gender}
+                    onChange={(e) => setFormData({ ...formData, gender: e.target.value as never })}
+                    className="w-full rounded-md border border-input bg-background px-3 h-10 text-sm"
+                  >
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
@@ -440,7 +561,13 @@ export function EmployeeProfile() {
                 </div>
                 <div className="space-y-1 col-span-2">
                   <Label htmlFor="editDob">Date of Birth</Label>
-                  <Input id="editDob" type="date" value={formData.dob} onChange={(e) => setFormData({...formData, dob: e.target.value})} required />
+                  <Input
+                    id="editDob"
+                    type="date"
+                    value={formData.dob}
+                    onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
+                    required
+                  />
                 </div>
               </div>
               {isHRorAdmin && (
@@ -448,11 +575,23 @@ export function EmployeeProfile() {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-1">
                       <Label htmlFor="editDesignation">Designation</Label>
-                      <Input id="editDesignation" value={formData.designation} onChange={(e) => setFormData({...formData, designation: e.target.value})} required />
+                      <Input
+                        id="editDesignation"
+                        value={formData.designation}
+                        onChange={(e) => setFormData({ ...formData, designation: e.target.value })}
+                        required
+                      />
                     </div>
                     <div className="space-y-1">
                       <Label htmlFor="editStatus">Status</Label>
-                      <select id="editStatus" value={formData.status} onChange={(e) => setFormData({...formData, status: e.target.value as any})} className="w-full rounded-md border border-input bg-background px-3 h-10 text-sm">
+                      <select
+                        id="editStatus"
+                        value={formData.status}
+                        onChange={(e) =>
+                          setFormData({ ...formData, status: e.target.value as never })
+                        }
+                        className="w-full rounded-md border border-input bg-background px-3 h-10 text-sm"
+                      >
                         <option value="active">Active</option>
                         <option value="pending">Pending Approval</option>
                         <option value="on_leave">On Leave</option>
@@ -464,7 +603,14 @@ export function EmployeeProfile() {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-1">
                       <Label htmlFor="editRole">Role</Label>
-                      <select id="editRole" value={formData.role} onChange={(e) => setFormData({...formData, role: e.target.value as any})} className="w-full rounded-md border border-input bg-background px-3 h-10 text-sm">
+                      <select
+                        id="editRole"
+                        value={formData.role}
+                        onChange={(e) =>
+                          setFormData({ ...formData, role: e.target.value as never })
+                        }
+                        className="w-full rounded-md border border-input bg-background px-3 h-10 text-sm"
+                      >
                         <option value="employee">Employee</option>
                         <option value="manager">Manager</option>
                         <option value="admin">Admin</option>
@@ -472,15 +618,27 @@ export function EmployeeProfile() {
                     </div>
                     <div className="space-y-1">
                       <Label htmlFor="editSalary">Salary (PKR)</Label>
-                      <Input id="editSalary" type="number" value={formData.salary} onChange={(e) => setFormData({...formData, salary: Number(e.target.value)})} required />
+                      <Input
+                        id="editSalary"
+                        type="number"
+                        value={formData.salary}
+                        onChange={(e) =>
+                          setFormData({ ...formData, salary: Number(e.target.value) })
+                        }
+                        required
+                      />
                     </div>
                   </div>
                 </>
               )}
             </div>
             <DialogFooter>
-              <Button type="button" variant="outline" onClick={() => setIsEditOpen(false)}>Cancel</Button>
-              <Button type="submit" disabled={updateMutation.isPending}>Save Changes</Button>
+              <Button type="button" variant="outline" onClick={() => setIsEditOpen(false)}>
+                Cancel
+              </Button>
+              <Button type="submit" disabled={updateMutation.isPending}>
+                Save Changes
+              </Button>
             </DialogFooter>
           </form>
         </DialogContent>

@@ -15,7 +15,7 @@ interface AuthState {
     password: string,
     departmentId: string,
     designation: string,
-    role: Role
+    role: Role,
   ) => Promise<SessionUser & { isPending?: boolean }>;
   logout: () => Promise<void>;
   checkSession: () => Promise<SessionUser | null>;

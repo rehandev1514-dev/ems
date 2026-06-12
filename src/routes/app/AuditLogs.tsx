@@ -1,6 +1,13 @@
 import { PageHeader } from "@/components/layout/page-header";
 import { Card } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { auditLogs } from "@/lib/mock-data";
 import { Badge } from "@/components/ui/badge";
 import { relativeTime } from "@/lib/format";
@@ -13,12 +20,13 @@ const actionStyle: Record<string, string> = {
   ROLE_CHANGE: "bg-primary/15 text-primary border-primary/30",
 };
 
-
-
 export function AuditLogsPage() {
   return (
     <>
-      <PageHeader title="Audit logs" description="Immutable record of all data changes, logins, and permission updates." />
+      <PageHeader
+        title="Audit logs"
+        description="Immutable record of all data changes, logins, and permission updates."
+      />
       <Card className="glass shadow-elevated p-4 overflow-auto">
         <Table>
           <TableHeader>
@@ -34,10 +42,16 @@ export function AuditLogsPage() {
             {auditLogs.map((l) => (
               <TableRow key={l.id}>
                 <TableCell className="font-medium text-sm">{l.actor}</TableCell>
-                <TableCell><Badge variant="outline" className={actionStyle[l.action] ?? ""}>{l.action}</Badge></TableCell>
+                <TableCell>
+                  <Badge variant="outline" className={actionStyle[l.action] ?? ""}>
+                    {l.action}
+                  </Badge>
+                </TableCell>
                 <TableCell className="text-sm">{l.target}</TableCell>
                 <TableCell className="text-xs font-mono text-muted-foreground">{l.ip}</TableCell>
-                <TableCell className="text-right text-xs text-muted-foreground">{relativeTime(l.timestamp)}</TableCell>
+                <TableCell className="text-right text-xs text-muted-foreground">
+                  {relativeTime(l.timestamp)}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

@@ -1,26 +1,75 @@
 import { Link, useLocation, useNavigate } from "react-router";
 import { useAuth } from "@/lib/auth-store";
 import {
-  LayoutDashboard, Users, Building2, CalendarCheck, Plane, FolderKanban, ListChecks,
-  Boxes, FileText, Bell, BarChart3, Settings, ScrollText, LogOut, ChevronRight, Hexagon,
+  LayoutDashboard,
+  Users,
+  Building2,
+  CalendarCheck,
+  Plane,
+  FolderKanban,
+  ListChecks,
+  Boxes,
+  FileText,
+  Bell,
+  BarChart3,
+  Settings,
+  ScrollText,
+  LogOut,
+  ChevronRight,
+  Hexagon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Role } from "@/lib/mock-data";
 
 const nav: Array<{ to: string; label: string; icon: typeof LayoutDashboard; roles: Role[] }> = [
-  { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard, roles: ["admin", "employee", "manager", "supervisor", "accountant"] },
+  {
+    to: "/dashboard",
+    label: "Dashboard",
+    icon: LayoutDashboard,
+    roles: ["admin", "employee", "manager", "supervisor", "accountant"],
+  },
   { to: "/employees", label: "Employees", icon: Users, roles: ["admin", "manager"] },
   { to: "/departments", label: "Departments", icon: Building2, roles: ["admin"] },
-  { to: "/attendance", label: "Attendance", icon: CalendarCheck, roles: ["admin", "employee", "manager", "supervisor"] },
-  { to: "/leaves", label: "Leaves", icon: Plane, roles: ["admin", "employee", "manager", "supervisor"] },
-  { to: "/projects", label: "Projects", icon: FolderKanban, roles: ["admin", "employee", "manager", "supervisor"] },
-  { to: "/tasks", label: "Tasks", icon: ListChecks, roles: ["admin", "employee", "manager", "supervisor"] },
+  {
+    to: "/attendance",
+    label: "Attendance",
+    icon: CalendarCheck,
+    roles: ["admin", "employee", "manager", "supervisor"],
+  },
+  {
+    to: "/leaves",
+    label: "Leaves",
+    icon: Plane,
+    roles: ["admin", "employee", "manager", "supervisor"],
+  },
+  {
+    to: "/projects",
+    label: "Projects",
+    icon: FolderKanban,
+    roles: ["admin", "employee", "manager", "supervisor"],
+  },
+  {
+    to: "/tasks",
+    label: "Tasks",
+    icon: ListChecks,
+    roles: ["admin", "employee", "manager", "supervisor"],
+  },
   { to: "/assets", label: "Assets", icon: Boxes, roles: ["admin", "accountant"] },
   { to: "/documents", label: "Documents", icon: FileText, roles: ["admin", "employee"] },
-  { to: "/notifications", label: "Notifications", icon: Bell, roles: ["admin", "employee", "manager", "supervisor", "accountant"] },
+  {
+    to: "/notifications",
+    label: "Notifications",
+    icon: Bell,
+    roles: ["admin", "employee", "manager", "supervisor", "accountant"],
+  },
   { to: "/reports", label: "Reports", icon: BarChart3, roles: ["admin", "manager", "accountant"] },
   { to: "/audit-logs", label: "Audit Logs", icon: ScrollText, roles: ["admin", "accountant"] },
-  { to: "/settings", label: "Settings", icon: Settings, roles: ["admin", "employee", "manager", "supervisor", "accountant"] },
+  {
+    to: "/settings",
+    label: "Settings",
+    icon: Settings,
+    roles: ["admin", "employee", "manager", "supervisor", "accountant"],
+  },
 ];
 
 export function Sidebar() {
@@ -42,13 +91,17 @@ export function Sidebar() {
         </div>
         <div className="leading-tight min-w-0">
           <div className="text-sm font-semibold tracking-tight truncate">VertexEMS</div>
-          <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground truncate">Code Vertex</div>
+          <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground truncate">
+            Code Vertex
+          </div>
         </div>
       </div>
 
       {/* Nav — scrollable */}
       <nav className="flex-1 overflow-y-auto scrollbar-thin px-3 py-4 space-y-0.5">
-        <div className="px-2 pb-2 text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Workspace</div>
+        <div className="px-2 pb-2 text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+          Workspace
+        </div>
         {items.map((item) => {
           const active = path === item.to || path.startsWith(item.to + "/");
           const Icon = item.icon;

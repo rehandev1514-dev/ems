@@ -1,0 +1,542 @@
+VertexEMS - What Is Next Guide
+================================
+
+Purpose
+-------
+This file explains the current state of the VertexEMS full-stack conversion, what has already been completed, what is still incomplete, the known risks before running the app, and the recommended next implementation sequence.
+
+Latest user request:
+"what's next give me a guide .text file"
+
+
+1. Current Status
+-----------------
+VertexEMS started as a frontend-only Vite + React + TypeScript application that used localStorage and mock data for authentication, employees, attendance, leaves, projects, tasks, assets, documents, notifications, reports, settings, and audit logs.
+
+The project is now partially transformed into a full-stack application. A separated backend package has been created in:
+
+  server/
+
+The backend architecture uses:
+
+  - Node.js
+  - Express.js
+  - TypeScript
+  - PostgreSQL
+  - Prisma ORM
+  - JWT authentication
+  - bcrypt password hashing
+  - RBAC authorization middleware
+  - Zod validation
+  - Socket.IO realtime notification foundation
+  - Centralized error handling
+  - Standard API response envelopes
+
+The backend is not fully finished yet. Some route modules are implemented, some are still missing, and the frontend is still connected to the old localStorage/mock API layer.
+
+
+2. Completed So Far
+-------------------
+
+Documentation completed:
+
+  - docs/MISSING_FEATURES_REPORT.md
+  - docs/IMPLEMENTATION_PLAN.md
+  - docs/DATABASE_SCHEMA.md
+  - docs/API_DOCUMENTATION.md
+  - docs/BACKEND_FOLDER_STRUCTURE.md
+  - docs/DEPLOYMENT_GUIDE.md
+
+Backend foundation completed:
+
+  - server/package.json
+  - server/tsconfig.json
+  - server/.env.example
+  - server/vitest.config.ts
+  - server/prisma/schema.prisma
+  - server/prisma/seed.ts
+  - server/src/config.ts
+  - server/src/prisma.ts
+  - server/src/app.ts
+  - server/src/index.ts
+  - server/src/types.ts
+  - server/src/realtime.ts
+
+Backend middleware/utilities completed:
+
+  - server/src/middleware/auth.ts
+  - server/src/middleware/error.ts
+  - server/src/middleware/validate.ts
+  - server/src/utils/api-response.ts
+  - server/src/utils/async-handler.ts
+  - server/src/utils/audit.ts
+  - server/src/utils/crypto.ts
+  - server/src/utils/notifications.ts
+  - server/src/utils/pagination.ts
+  - server/src/utils/serializers.ts
+
+Backend route modules currently present:
+
+  - server/src/routes/auth.routes.ts
+  - server/src/routes/employees.routes.ts
+  - server/src/routes/departments.routes.ts
+  - server/src/routes/attendance.routes.ts
+  - server/src/routes/leaves.routes.ts
+  - server/src/routes/projects.routes.ts
+  - server/src/routes/tasks.routes.ts
+  - server/src/routes/assets.routes.ts
+  - server/src/routes/documents.routes.ts
+  - server/src/routes/notifications.routes.ts
+
+Major backend features already started/added:
+
+  - Login, registration, refresh token, logout, current-user, password reset, email verification, change-password, revoke-sessions routes.
+  - Employee CRUD and employee approval/termination routes.
+  - Department CRUD routes.
+  - Attendance listing, check-in, check-out, and adjustment routes.
+  - Leave request, leave balances, approval/rejection, and cancellation routes.
+  - Project/task/assets/documents/notifications route files exist and need final validation.
+  - Prisma schema for all EMS domains.
+  - Seed data with demo admin login.
+
+Demo seed login planned:
+
+  Email:    admin@codevertex.io
+  Password: demo1234
+
+
+3. Not Yet Complete
+-------------------
+
+The application is not production-ready yet. These items are still pending:
+
+  1. Backend missing route modules
+     server/src/app.ts imports these files, but they are not currently present in server/src/routes:
+
+       - server/src/routes/audit-logs.routes.ts
+       - server/src/routes/reports.routes.ts
+       - server/src/routes/settings.routes.ts
+
+     Until these files are created, the backend TypeScript build will fail.
+
+  2. Backend validation has not been run
+     Backend dependencies still need to be installed and Prisma Client still needs to be generated before a real typecheck/build can confirm all code is valid.
+
+  3. Database migration has not been created/applied
+     The Prisma schema exists, but the actual PostgreSQL database still needs migration and seed execution.
+
+  4. Frontend is not connected to the backend yet
+     The React app still uses localStorage/mock functions in:
+
+       - src/lib/api/auth.ts
+       - src/lib/api/app.functions.ts
+       - src/lib/api/data.ts
+       - src/lib/mock-data.ts
+
+     These must be replaced with HTTP calls to the Express API.
+
+  5. Frontend pages still need API wiring
+     Pages such as Employees, Attendance, Leaves, Projects, Tasks, Assets, Documents, Notifications, Reports, Settings, and Dashboard still need to consume real backend data.
+
+  6. Deployment files are not fully implemented
+     Deployment documentation exists, but production Docker files, docker-compose, and CI/CD workflow files still need to be added.
+
+  7. Tests are not complete
+     Test infrastructure has started, but unit/integration/API tests still need to be implemented.
+
+
+4. Known Issues Before Running
+------------------------------
+
+Important issues to fix or verify before trying to run the full stack:
+
+  - server/src/app.ts currently imports auditLogsRouter, reportsRouter, and settingsRouter.
+    The matching files are missing, so create these first or temporarily remove the imports while developing.
+
+  - server/.env does not exist yet. Copy server/.env.example to server/.env and fill real values before running backend commands.
+
+  - DATABASE_URL must point to a running PostgreSQL database.
+
+  - JWT_ACCESS_SECRET and JWT_REFRESH_SECRET must be at least 32 characters.
+
+  - Prisma Client must be generated after installing backend dependencies.
+
+  - The frontend root .env.example still needs backend API variables such as:
+
+      VITE_API_URL=http://localhost:4000/api
+      VITE_SOCKET_URL=http://localhost:4000
+
+  - Do not treat the app as production-ready until backend typecheck, frontend build, migrations, seed, API smoke tests, and frontend integration are complete.
+
+
+5. Recommended Next Implementation Order
+----------------------------------------
+
+Follow this order to finish the project cleanly.
+
+Step 1 - Complete missing backend route modules
+
+  Create and implement:
+
+    - server/src/routes/audit-logs.routes.ts
+    - server/src/routes/reports.routes.ts
+    - server/src/routes/settings.routes.ts
+
+  Required behavior:
+
+    - Use authenticate middleware on all routes.
+    - Use authorize middleware for admin/manager/accountant-only actions.
+    - Use Zod validation for query/body params.
+    - Use pagination/filtering/search/sorting where appropriate.
+    - Use ok() response helper.
+    - Use ApiError for controlled failures.
+    - Use audit() for important changes.
+
+Step 2 - Review existing backend route files
+
+  Review and typecheck these files:
+
+    - server/src/routes/projects.routes.ts
+    - server/src/routes/tasks.routes.ts
+    - server/src/routes/assets.routes.ts
+    - server/src/routes/documents.routes.ts
+    - server/src/routes/notifications.routes.ts
+    - server/src/routes/attendance.routes.ts
+    - server/src/routes/leaves.routes.ts
+    - server/src/routes/auth.routes.ts
+    - server/src/routes/employees.routes.ts
+    - server/src/routes/departments.routes.ts
+
+  Confirm:
+
+    - Prisma model names are correct.
+    - Zod schemas match frontend data shapes.
+    - RBAC rules match role permissions.
+    - API responses match docs/API_DOCUMENTATION.md.
+    - Realtime notification events are emitted where needed.
+
+Step 3 - Install backend dependencies
+
+  Run:
+
+    cd server
+    npm install
+
+Step 4 - Create backend environment file
+
+  Run:
+
+    cd server
+    cp .env.example .env
+
+  Then edit server/.env.
+
+  Example values:
+
+    NODE_ENV=development
+    PORT=4000
+    DATABASE_URL="postgresql://postgres:postgres@localhost:5432/vertex_ems?schema=public"
+    JWT_ACCESS_SECRET="replace-with-at-least-32-characters-access-secret"
+    JWT_REFRESH_SECRET="replace-with-at-least-32-characters-refresh-secret"
+    ACCESS_TOKEN_TTL=15m
+    REFRESH_TOKEN_TTL_DAYS=30
+    CORS_ORIGIN=http://localhost:5173
+    UPLOAD_DIR=uploads
+    DEFAULT_EMPLOYEE_PASSWORD=demo1234
+    LATE_AFTER=09:15
+
+  You can generate strong secrets with:
+
+    openssl rand -hex 32
+
+Step 5 - Prepare PostgreSQL database
+
+  Make sure PostgreSQL is running locally or in a hosted environment.
+
+  If using local PostgreSQL, create the database if it does not exist:
+
+    createdb vertex_ems
+
+  If createdb is not available, create the database through your PostgreSQL GUI or psql.
+
+Step 6 - Generate Prisma Client and migrate
+
+  Run from server/:
+
+    npm run prisma:generate
+    npm run prisma:migrate
+
+Step 7 - Seed database
+
+  Run from server/:
+
+    npm run seed
+
+  Expected seed login:
+
+    admin@codevertex.io / demo1234
+
+Step 8 - Typecheck and build backend
+
+  Run from server/:
+
+    npm run typecheck
+    npm run build
+
+  If typecheck fails, fix all TypeScript/Prisma issues before frontend integration.
+
+Step 9 - Start backend
+
+  Run from server/:
+
+    npm run dev
+
+  Health check URLs:
+
+    http://localhost:4000/health
+    http://localhost:4000/api/health
+
+Step 10 - Test auth manually
+
+  Example login request:
+
+    curl -X POST http://localhost:4000/api/auth/login \
+      -H "Content-Type: application/json" \
+      -d '{"email":"admin@codevertex.io","password":"demo1234"}'
+
+  Confirm the response returns a user plus access/refresh token data.
+
+Step 11 - Add frontend environment variables
+
+  Update root .env.example and create root .env if needed:
+
+    VITE_APP_NAME=VertexEMS
+    VITE_APP_VERSION=1.0.0
+    VITE_API_URL=http://localhost:4000/api
+    VITE_SOCKET_URL=http://localhost:4000
+
+Step 12 - Replace frontend localStorage auth
+
+  Replace localStorage auth in:
+
+    - src/lib/api/auth.ts
+    - src/lib/auth-store.ts
+
+  Required behavior:
+
+    - POST /api/auth/login for login.
+    - POST /api/auth/register for signup.
+    - POST /api/auth/forgot-password for forgot password.
+    - POST /api/auth/refresh when access token expires.
+    - POST /api/auth/logout for logout.
+    - GET /api/auth/me to restore sessions.
+
+Step 13 - Replace frontend business data functions
+
+  Replace localStorage business functions in:
+
+    - src/lib/api/app.functions.ts
+
+  Map each function to backend endpoints:
+
+    - Employees -> /api/employees
+    - Departments -> /api/departments
+    - Attendance -> /api/attendance
+    - Leaves -> /api/leaves
+    - Projects -> /api/projects
+    - Tasks -> /api/tasks
+    - Assets -> /api/assets
+    - Documents -> /api/documents
+    - Notifications -> /api/notifications
+    - Audit Logs -> /api/audit-logs
+    - Reports -> /api/reports
+    - Settings -> /api/settings
+
+Step 14 - Remove direct mock-data usage from pages
+
+  Search for direct imports from src/lib/mock-data.ts and replace them with API query calls.
+
+  Likely affected files:
+
+    - src/components/layout/topbar.tsx
+    - src/routes/app/Dashboard.tsx
+    - src/routes/app/Employees.tsx
+    - src/routes/app/EmployeeDetail.tsx
+    - src/routes/app/Departments.tsx
+    - src/routes/app/Attendance.tsx
+    - src/routes/app/Leaves.tsx
+    - src/routes/app/Projects.tsx
+    - src/routes/app/Tasks.tsx
+    - src/routes/app/Assets.tsx
+    - src/routes/app/Documents.tsx
+    - src/routes/app/AuditLogs.tsx
+    - src/routes/app/Notifications.tsx
+    - src/routes/app/Reports.tsx
+    - src/routes/app/Settings.tsx
+
+Step 15 - Wire UI actions to backend mutations
+
+  Ensure every button/form performs a real backend action:
+
+    - Add/edit/delete employee.
+    - Approve employee.
+    - Terminate employee.
+    - Create/update/delete department.
+    - Check in/out attendance.
+    - Adjust attendance.
+    - Request/approve/reject/cancel leave.
+    - Create/update/archive project.
+    - Create/update/assign/complete task.
+    - Assign/return/retire asset.
+    - Upload/download/delete documents.
+    - Mark notifications read.
+    - Update settings.
+
+Step 16 - Run frontend validation
+
+  From project root:
+
+    npm install
+    npm run build
+
+Step 17 - Add tests
+
+  Backend tests should cover:
+
+    - Auth login/refresh/logout.
+    - RBAC failures and successes.
+    - Employee CRUD.
+    - Attendance check-in/check-out.
+    - Leave balance and approval flow.
+    - Projects/tasks/assets/documents/notifications.
+
+  Frontend tests should cover:
+
+    - Auth flows.
+    - Route guards.
+    - Form validation.
+    - API error states.
+
+Step 18 - Add deployment support
+
+  Add:
+
+    - server/Dockerfile
+    - frontend/root Dockerfile or deployment-specific build instructions
+    - docker-compose.yml for local full-stack development
+    - .dockerignore files
+    - CI workflow for lint/typecheck/build/test
+
+
+6. Suggested Immediate Next Coding Task
+---------------------------------------
+
+The next coding task should be:
+
+  Implement the three missing backend route modules required by server/src/app.ts:
+
+    1. server/src/routes/audit-logs.routes.ts
+    2. server/src/routes/reports.routes.ts
+    3. server/src/routes/settings.routes.ts
+
+Why this is first:
+
+  - server/src/app.ts already imports these modules.
+  - Without these files, backend compilation cannot succeed.
+  - Once these exist, the backend can be installed, Prisma-generated, typechecked, and debugged properly.
+
+
+7. Backend Validation Command Sequence
+--------------------------------------
+
+After completing the missing route files, run this exact sequence:
+
+  cd server
+  npm install
+  cp .env.example .env
+  # Edit .env with real DATABASE_URL and JWT secrets before continuing.
+  npm run prisma:generate
+  npm run prisma:migrate
+  npm run seed
+  npm run typecheck
+  npm run build
+  npm run dev
+
+Then test:
+
+  curl http://localhost:4000/api/health
+
+  curl -X POST http://localhost:4000/api/auth/login \
+    -H "Content-Type: application/json" \
+    -d '{"email":"admin@codevertex.io","password":"demo1234"}'
+
+
+8. Frontend Integration Plan
+----------------------------
+
+After the backend typechecks and runs:
+
+  1. Add a typed HTTP client helper.
+  2. Store access tokens safely in the frontend auth layer.
+  3. Add refresh-token handling.
+  4. Replace src/lib/api/auth.ts with real HTTP auth calls.
+  5. Replace src/lib/api/app.functions.ts with real HTTP domain calls.
+  6. Keep src/lib/api/query-hooks.ts if useful, but make it call the HTTP-backed functions.
+  7. Remove localStorage database dependency from production flows.
+  8. Replace direct mock-data imports in pages with API queries.
+  9. Connect Socket.IO to receive realtime notifications.
+  10. Run npm run build from the root and fix all TypeScript issues.
+
+
+9. Final Production Checklist
+-----------------------------
+
+The project should only be called production-ready when all of these are complete:
+
+  - All backend route imports resolve.
+  - Backend dependencies install cleanly.
+  - Prisma Client generates cleanly.
+  - Database migration applies cleanly.
+  - Database seed runs cleanly.
+  - Backend typecheck passes.
+  - Backend build passes.
+  - Frontend build passes.
+  - Frontend no longer depends on mock/localStorage data for real workflows.
+  - Every frontend button/form calls a real backend endpoint.
+  - Auth, refresh tokens, logout, password reset, and RBAC are verified.
+  - API validation and error responses are consistent.
+  - Audit logs are created for important actions.
+  - Notifications work through database records and realtime events.
+  - File/document upload uses backend storage rules.
+  - Security middleware is enabled.
+  - Production secrets are not committed.
+  - Docker/deployment files exist.
+  - Tests cover critical backend and frontend flows.
+
+
+10. Short Summary
+-----------------
+
+What is done:
+
+  - Full-stack architecture and documentation are in place.
+  - Prisma database schema exists.
+  - Backend foundation exists.
+  - Seed data exists.
+  - Many backend route modules exist.
+
+What is next:
+
+  - Add missing audit-logs, reports, and settings route modules.
+  - Install backend dependencies.
+  - Configure server/.env.
+  - Generate Prisma Client.
+  - Run migrations and seed data.
+  - Typecheck/build backend.
+  - Connect frontend to backend.
+  - Remove mock/localStorage production data flow.
+  - Add tests and deployment files.
+
+Recommended next command for the developer after route completion:
+
+  cd server && npm install

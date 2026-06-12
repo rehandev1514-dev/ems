@@ -4,10 +4,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:server": "npm --prefix server run dev",
+    "typecheck": "tsc --noEmit && npm --prefix server run typecheck",
     "build": "tsc --noEmit && vite build",
+    "build:server": "npm --prefix server run build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prisma:generate": "npm --prefix server run prisma:generate --",
+    "prisma:migrate": "npm --prefix server run prisma:migrate --",
+    "prisma:deploy": "npm --prefix server run prisma:deploy --",
+    "seed": "npm --prefix server run seed --"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",

@@ -55,7 +55,9 @@ export function LoginPage() {
           </div>
           <div className="leading-tight">
             <div className="font-display text-lg font-semibold">VertexEMS</div>
-            <div className="text-xs uppercase tracking-[0.18em] opacity-80">Code Vertex Solutions</div>
+            <div className="text-xs uppercase tracking-[0.18em] opacity-80">
+              Code Vertex Solutions
+            </div>
           </div>
         </div>
 
@@ -67,11 +69,15 @@ export function LoginPage() {
             Run your entire workforce from one premium workspace.
           </h1>
           <p className="text-base opacity-90 max-w-md">
-            Employees, attendance, leave, projects, assets and audit logs —
-            unified, role-aware, and built for scale.
+            Employees, attendance, leave, projects, assets and audit logs — unified, role-aware, and
+            built for scale.
           </p>
           <div className="grid grid-cols-3 gap-4 max-w-md pt-4">
-            {[["12+", "Modules"], ["RBAC", "First-class"], ["Realtime", "Insights"]].map(([v, l]) => (
+            {[
+              ["12+", "Modules"],
+              ["RBAC", "First-class"],
+              ["Realtime", "Insights"],
+            ].map(([v, l]) => (
               <div key={l} className="border-l-2 border-white/30 pl-3">
                 <div className="font-display text-2xl font-semibold">{v}</div>
                 <div className="text-xs uppercase tracking-wider opacity-80">{l}</div>
@@ -103,21 +109,40 @@ export function LoginPage() {
           <form className="mt-6 space-y-4" onSubmit={onSubmit}>
             <div className="space-y-1.5">
               <Label htmlFor="email">Work email</Label>
-              <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@company.com" autoComplete="email" />
+              <Input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@company.com"
+                autoComplete="email"
+              />
             </div>
             <div className="space-y-1.5">
               <div className="flex items-center justify-between">
                 <Label htmlFor="password">Password</Label>
-                <Link to="/auth/forgot" className="text-xs text-primary hover:underline">Forgot?</Link>
+                <Link to="/auth/forgot" className="text-xs text-primary hover:underline">
+                  Forgot?
+                </Link>
               </div>
-              <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="current-password" />
+              <Input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                autoComplete="current-password"
+              />
             </div>
             <label className="flex items-center gap-2 text-sm text-muted-foreground select-none">
               <Checkbox checked={remember} onCheckedChange={(v) => setRemember(!!v)} />
               Remember me for 30 days
             </label>
 
-            <Button type="submit" className="w-full gradient-primary text-primary-foreground hover:opacity-95 shadow-glow h-10" disabled={loading}>
+            <Button
+              type="submit"
+              className="w-full gradient-primary text-primary-foreground hover:opacity-95 shadow-glow h-10"
+              disabled={loading}
+            >
               {loading ? <Loader2 className="size-4 animate-spin" /> : "Sign in"}
             </Button>
 

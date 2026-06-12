@@ -19,21 +19,45 @@ const accents = {
   warning: "from-[--color-warning]/20 to-[--color-warning]/0 text-[--color-warning]",
 };
 
-export function StatCard({ label, value, icon: Icon, trend, accent = "primary", className }: StatCardProps) {
+export function StatCard({
+  label,
+  value,
+  icon: Icon,
+  trend,
+  accent = "primary",
+  className,
+}: StatCardProps) {
   return (
     <Card className={cn("relative overflow-hidden p-5 glass shadow-elevated", className)}>
-      <div className={cn("absolute -top-10 -right-10 size-32 rounded-full blur-3xl bg-gradient-to-br opacity-60", accents[accent])} />
+      <div
+        className={cn(
+          "absolute -top-10 -right-10 size-32 rounded-full blur-3xl bg-linear-to-br opacity-60",
+          accents[accent],
+        )}
+      />
       <div className="relative flex items-start justify-between">
         <div>
-          <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium">{label}</p>
+          <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium">
+            {label}
+          </p>
           <p className="mt-2 text-3xl font-semibold font-display">{value}</p>
           {trend && (
-            <p className={cn("mt-1.5 text-xs font-medium", trend.positive ? "text-[--color-success]" : "text-destructive")}>
+            <p
+              className={cn(
+                "mt-1.5 text-xs font-medium",
+                trend.positive ? "text-[--color-success]" : "text-destructive",
+              )}
+            >
               {trend.positive ? "▲" : "▼"} {trend.value}
             </p>
           )}
         </div>
-        <div className={cn("size-10 rounded-lg flex items-center justify-center border border-border bg-card", accents[accent].replace("from-", "").split(" ")[2])}>
+        <div
+          className={cn(
+            "size-10 rounded-lg flex items-center justify-center border border-border bg-card",
+            accents[accent].replace("from-", "").split(" ")[2],
+          )}
+        >
           <Icon className="size-5" />
         </div>
       </div>

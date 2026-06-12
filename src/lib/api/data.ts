@@ -48,6 +48,8 @@ export interface DatabaseSchema {
 
 const DB_KEY = "vertex_ems_db";
 
+let dbCache: DatabaseSchema | null = null;
+
 // Simple demo password hash
 function hashPwd(pwd: string): string {
   let hash = 0;
@@ -86,7 +88,7 @@ function buildDefaultDb(): DatabaseSchema {
     role: "admin",
   };
 
-  const employeesList = [...defaultEmployees];
+  const employeesList = defaultEmployees.map((employee) => ({ ...employee }));
   const adminIdx = employeesList.findIndex((e) => e.id === "e2");
   if (adminIdx !== -1) {
     employeesList[adminIdx] = adminEmployee;
@@ -95,45 +97,70 @@ function buildDefaultDb(): DatabaseSchema {
   }
 
   const credentials: UserCredentials[] = Array.from(credentialsSet.entries()).map(
-    ([email, passwordHash]) => ({ email, passwordHash })
+    ([email, passwordHash]) => ({ email, passwordHash }),
   );
 
   return {
     employees: employeesList,
-    departments: defaultDepartments,
-    attendance: defaultAttendance,
-    leaveRequests: defaultLeaves,
-    projects: defaultProjects,
-    tasks: defaultTasks,
-    assets: defaultAssets,
-    documents: defaultDocuments,
-    notifications: defaultNotifications,
-    auditLogs: defaultAuditLogs,
+    departments: defaultDepartments.map((department) => ({ ...department })),
+    attendance: defaultAttendance.map((record) => ({ ...record })),
+    leaveRequests: defaultLeaves.map((request) => ({ ...request })),
+    projects: defaultProjects.map((project) => ({
+      ...project,
+      memberIds: [...project.memberIds],
+    })),
+    tasks: defaultTasks.map((task) => ({ ...task })),
+    assets: defaultAssets.map((asset) => ({ ...asset })),
+    documents: defaultDocuments.map((document) => ({ ...document })),
+    notifications: defaultNotifications.map((notification) => ({ ...notification })),
+    auditLogs: defaultAuditLogs.map((log) => ({ ...log })),
     credentials,
   };
 }
 
-export function initDb(): void {
-  if (!localStorage.getItem(DB_KEY)) {
-    localStorage.setItem(DB_KEY, JSON.stringify(buildDefaultDb()));
+function readStoredDb(): DatabaseSchema | null {
+  const raw = localStorage.getItem(DB_KEY);
+  if (!raw) return null;
+
+  try {
+    return JSON.parse(raw) as DatabaseSchema;
+  } catch {
+    return null;
   }
+}
+
+function writeStoredDb(db: DatabaseSchema): void {
+  localStorage.setItem(DB_KEY, JSON.stringify(db));
+}
+
+export function initDb(): void {
+  if (dbCache) return;
+
+  const storedDb = readStoredDb();
+  if (storedDb) {
+    dbCache = storedDb;
+    return;
+  }
+
+  dbCache = buildDefaultDb();
+  writeStoredDb(dbCache);
 }
 
 export function getDb(): DatabaseSchema {
-  const raw = localStorage.getItem(DB_KEY);
-  if (!raw) {
-    const db = buildDefaultDb();
-    localStorage.setItem(DB_KEY, JSON.stringify(db));
-    return db;
+  if (!dbCache) {
+    initDb();
   }
-  return JSON.parse(raw) as DatabaseSchema;
+
+  return dbCache as DatabaseSchema;
 }
 
 export function saveDb(db: DatabaseSchema): void {
-  localStorage.setItem(DB_KEY, JSON.stringify(db));
+  dbCache = db;
+  writeStoredDb(dbCache);
 }
 
 /** Reset DB to defaults (useful for dev/testing) */
 export function resetDb(): void {
-  localStorage.setItem(DB_KEY, JSON.stringify(buildDefaultDb()));
+  dbCache = buildDefaultDb();
+  writeStoredDb(dbCache);
 }

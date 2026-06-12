@@ -7,10 +7,12 @@ import { relativeTime } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
 const icons = {
-  leave: Plane, task: ListChecks, attendance: Clock, project: FolderKanban, system: Cog,
+  leave: Plane,
+  task: ListChecks,
+  attendance: Clock,
+  project: FolderKanban,
+  system: Cog,
 };
-
-
 
 export function NotificationsPage() {
   return (
@@ -24,7 +26,13 @@ export function NotificationsPage() {
         {notifications.map((n) => {
           const Icon = icons[n.kind] ?? Bell;
           return (
-            <div key={n.id} className={cn("flex items-start gap-4 p-4 hover:bg-accent/30 transition-colors", n.unread && "bg-primary/[0.03]")}>
+            <div
+              key={n.id}
+              className={cn(
+                "flex items-start gap-4 p-4 hover:bg-accent/30 transition-colors",
+                n.unread && "bg-primary/3",
+              )}
+            >
               <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                 <Icon className="size-5 text-primary" />
               </div>

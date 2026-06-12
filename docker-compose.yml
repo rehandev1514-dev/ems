@@ -1,0 +1,78 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: vertex_db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-vertex}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-vertex_password}
+      POSTGRES_DB: ${POSTGRES_DB:-vertex_ems}
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-vertex} -d $${POSTGRES_DB:-vertex_ems}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - vertex_net
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: vertex_backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      DATABASE_URL: postgresql://${POSTGRES_USER:-vertex}:${POSTGRES_PASSWORD:-vertex_password}@db:5432/${POSTGRES_DB:-vertex_ems}?schema=public
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET:-changeme_access_secret_min_32_chars_long}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-changeme_refresh_secret_min_32_chars_long}
+      CORS_ORIGIN: "http://localhost:8080" # Match frontend exposed port
+    ports:
+      - "4000:4000"
+    volumes:
+      - uploads:/app/server/uploads
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:4000/health').then((r)=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - vertex_net
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: /api
+        VITE_SOCKET_URL: /
+    container_name: vertex_frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - vertex_net
+
+volumes:
+  pgdata:
+  uploads:
+
+networks:
+  vertex_net:
+    driver: bridge

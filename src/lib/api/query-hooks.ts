@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 
 type QueryKey = string[];
 
@@ -6,53 +6,81 @@ type QueryKey = string[];
 const queryEvents = new EventTarget();
 
 export function useQueryClient() {
-  return {
-    invalidateQueries: ({ queryKey }: { queryKey: QueryKey }) => {
-      const eventName = queryKey[0]; // simplistic invalidation matching the first key part
-      queryEvents.dispatchEvent(new Event(`invalidate-${eventName}`));
-    }
-  };
+  return useMemo(
+    () => ({
+      invalidateQueries: ({ queryKey }: { queryKey: QueryKey }) => {
+        const eventName = queryKey[0] ?? JSON.stringify(queryKey); // simplistic invalidation matching the first key part
+        queryEvents.dispatchEvent(new Event(`invalidate-${eventName}`));
+      },
+    }),
+    [],
+  );
 }
 
-export function useQuery<T>({ queryKey, queryFn }: { queryKey: QueryKey; queryFn: () => Promise<T> }) {
+export function useQuery<T>({
+  queryKey,
+  queryFn,
+}: {
+  queryKey: QueryKey;
+  queryFn: () => Promise<T>;
+}) {
   const [data, setData] = useState<T | undefined>(undefined);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
+  const queryFnRef = useRef(queryFn);
+  const requestIdRef = useRef(0);
+  const mountedRef = useRef(false);
+  const queryKeyHash = JSON.stringify(queryKey);
+  const eventName = queryKey[0] ?? queryKeyHash;
+
+  queryFnRef.current = queryFn;
+
   const fetchData = useCallback(async () => {
+    if (!mountedRef.current) return;
+
+    const requestId = ++requestIdRef.current;
     setIsLoading(true);
     try {
-      const result = await queryFn();
+      const result = await queryFnRef.current();
+      if (!mountedRef.current || requestId !== requestIdRef.current) return;
+
       setData(result);
       setError(null);
-    } catch (err: any) {
-      setError(err);
+    } catch (err: unknown) {
+      if (!mountedRef.current || requestId !== requestIdRef.current) return;
+
+      setError(err instanceof Error ? err : new Error("Query failed"));
     } finally {
-      setIsLoading(false);
+      if (mountedRef.current && requestId === requestIdRef.current) {
+        setIsLoading(false);
+      }
     }
-  }, [queryFn]);
+  }, []);
 
   useEffect(() => {
+    mountedRef.current = true;
     fetchData();
 
     // Listen for invalidations
-    const eventName = queryKey[0];
     const listener = () => fetchData();
     queryEvents.addEventListener(`invalidate-${eventName}`, listener);
 
     return () => {
+      mountedRef.current = false;
+      requestIdRef.current += 1;
       queryEvents.removeEventListener(`invalidate-${eventName}`, listener);
     };
-  }, [fetchData, queryKey[0]]);
+  }, [eventName, fetchData, queryKeyHash]);
 
-  return { data, isLoading, error };
+  return { data, isLoading, error, refetch: fetchData };
 }
 
-export function useMutation<TData, TVariables>({ 
-  mutationFn, 
-  onSuccess, 
-  onError 
-}: { 
+export function useMutation<TData, TVariables>({
+  mutationFn,
+  onSuccess,
+  onError,
+}: {
   mutationFn: (vars: TVariables) => Promise<TData>;
   onSuccess?: (data: TData) => void;
   onError?: (err: Error) => void;

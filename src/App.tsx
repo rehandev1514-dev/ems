@@ -10,20 +10,42 @@ import { SignupPage } from "./routes/auth/SignupPage";
 import { ForgotPage } from "./routes/auth/ForgotPage";
 
 // App pages (lazy loaded)
-const Dashboard = lazy(() => import("./routes/app/Dashboard").then((m) => ({ default: m.Dashboard })));
-const Employees = lazy(() => import("./routes/app/Employees").then((m) => ({ default: m.EmployeesPage })));
-const EmployeeDetail = lazy(() => import("./routes/app/EmployeeDetail").then((m) => ({ default: m.EmployeeProfile })));
-const Attendance = lazy(() => import("./routes/app/Attendance").then((m) => ({ default: m.AttendancePage })));
+const Dashboard = lazy(() =>
+  import("./routes/app/Dashboard").then((m) => ({ default: m.Dashboard })),
+);
+const Employees = lazy(() =>
+  import("./routes/app/Employees").then((m) => ({ default: m.EmployeesPage })),
+);
+const EmployeeDetail = lazy(() =>
+  import("./routes/app/EmployeeDetail").then((m) => ({ default: m.EmployeeProfile })),
+);
+const Attendance = lazy(() =>
+  import("./routes/app/Attendance").then((m) => ({ default: m.AttendancePage })),
+);
 const Leaves = lazy(() => import("./routes/app/Leaves").then((m) => ({ default: m.LeavesPage })));
-const Documents = lazy(() => import("./routes/app/Documents").then((m) => ({ default: m.DocumentsPage })));
+const Documents = lazy(() =>
+  import("./routes/app/Documents").then((m) => ({ default: m.DocumentsPage })),
+);
 const Assets = lazy(() => import("./routes/app/Assets").then((m) => ({ default: m.AssetsPage })));
-const Projects = lazy(() => import("./routes/app/Projects").then((m) => ({ default: m.ProjectsPage })));
+const Projects = lazy(() =>
+  import("./routes/app/Projects").then((m) => ({ default: m.ProjectsPage })),
+);
 const Tasks = lazy(() => import("./routes/app/Tasks").then((m) => ({ default: m.TasksPage })));
-const Departments = lazy(() => import("./routes/app/Departments").then((m) => ({ default: m.DepartmentsPage })));
-const Reports = lazy(() => import("./routes/app/Reports").then((m) => ({ default: m.ReportsPage })));
-const AuditLogs = lazy(() => import("./routes/app/AuditLogs").then((m) => ({ default: m.AuditLogsPage })));
-const Notifications = lazy(() => import("./routes/app/Notifications").then((m) => ({ default: m.NotificationsPage })));
-const Settings = lazy(() => import("./routes/app/Settings").then((m) => ({ default: m.SettingsPage })));
+const Departments = lazy(() =>
+  import("./routes/app/Departments").then((m) => ({ default: m.DepartmentsPage })),
+);
+const Reports = lazy(() =>
+  import("./routes/app/Reports").then((m) => ({ default: m.ReportsPage })),
+);
+const AuditLogs = lazy(() =>
+  import("./routes/app/AuditLogs").then((m) => ({ default: m.AuditLogsPage })),
+);
+const Notifications = lazy(() =>
+  import("./routes/app/Notifications").then((m) => ({ default: m.NotificationsPage })),
+);
+const Settings = lazy(() =>
+  import("./routes/app/Settings").then((m) => ({ default: m.SettingsPage })),
+);
 
 function PageLoader() {
   return (

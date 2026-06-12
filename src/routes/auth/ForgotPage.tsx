@@ -40,14 +40,25 @@ export function ForgotPage() {
           >
             <div className="space-y-1.5">
               <Label htmlFor="email">Work email</Label>
-              <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              <Input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
-            <Button type="submit" className="w-full gradient-primary text-primary-foreground hover:opacity-95 shadow-glow h-10">
+            <Button
+              type="submit"
+              className="w-full gradient-primary text-primary-foreground hover:opacity-95 shadow-glow h-10"
+            >
               Send recovery link
             </Button>
           </form>
         )}
-        <Link to="/auth" className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
+        <Link
+          to="/auth"
+          className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+        >
           <ArrowLeft className="size-4" /> Back to sign in
         </Link>
       </Card>

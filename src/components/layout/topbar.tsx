@@ -4,8 +4,12 @@ import { Bell, Search, LogOut, User } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import {
-  DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
-  DropdownMenuSeparator, DropdownMenuTrigger,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { initials } from "@/lib/format";
 import { notifications } from "@/lib/mock-data";
@@ -73,14 +77,18 @@ export function Topbar() {
             </Avatar>
             <div className="hidden sm:block text-left leading-tight">
               <div className="text-xs font-medium">{user.name}</div>
-              <div className="text-[10px] text-muted-foreground">{roleLabels[user.role] ?? user.role}</div>
+              <div className="text-[10px] text-muted-foreground">
+                {roleLabels[user.role] ?? user.role}
+              </div>
             </div>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-52">
             <DropdownMenuLabel>
               <div className="text-sm font-medium">{user.name}</div>
               <div className="text-xs text-muted-foreground font-normal">{user.email}</div>
-              <div className="text-xs text-primary font-medium mt-0.5 capitalize">{roleLabels[user.role] ?? user.role}</div>
+              <div className="text-xs text-primary font-medium mt-0.5 capitalize">
+                {roleLabels[user.role] ?? user.role}
+              </div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="gap-2">

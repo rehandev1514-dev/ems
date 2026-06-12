@@ -1,5 +1,9 @@
 export const formatCurrency = (n: number) =>
-  new Intl.NumberFormat("en-PK", { style: "currency", currency: "PKR", maximumFractionDigits: 0 }).format(n);
+  new Intl.NumberFormat("en-PK", {
+    style: "currency",
+    currency: "PKR",
+    maximumFractionDigits: 0,
+  }).format(n);
 
 export const formatDate = (s: string | Date) => {
   const d = typeof s === "string" ? new Date(s) : s;
@@ -7,7 +11,12 @@ export const formatDate = (s: string | Date) => {
 };
 
 export const initials = (name: string) =>
-  name.split(" ").map((p) => p[0]).slice(0, 2).join("").toUpperCase();
+  name
+    .split(" ")
+    .map((p) => p[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
 
 export const relativeTime = (iso: string) => {
   const d = new Date(iso).getTime();

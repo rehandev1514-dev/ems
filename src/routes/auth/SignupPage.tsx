@@ -35,7 +35,9 @@ export function SignupPage() {
     try {
       const res = await signup(fullName, email, password, departmentId, designation, role);
       if (res?.isPending) {
-        toast.success("Registration request submitted! Your account is pending administrator approval.");
+        toast.success(
+          "Registration request submitted! Your account is pending administrator approval.",
+        );
         navigate("/auth");
       } else {
         toast.success(`Welcome, ${fullName.split(" ")[0]}! Your account has been registered.`);
@@ -63,7 +65,9 @@ export function SignupPage() {
           </div>
           <div className="leading-tight">
             <div className="font-display text-lg font-semibold">VertexEMS</div>
-            <div className="text-xs uppercase tracking-[0.18em] opacity-80">Code Vertex Solutions</div>
+            <div className="text-xs uppercase tracking-[0.18em] opacity-80">
+              Code Vertex Solutions
+            </div>
           </div>
         </div>
 
@@ -75,11 +79,15 @@ export function SignupPage() {
             Join the premium enterprise workspace today.
           </h1>
           <p className="text-base opacity-90 max-w-md">
-            Set up your professional identity, select your workspace department,
-            and access unified tracking features instantly.
+            Set up your professional identity, select your workspace department, and access unified
+            tracking features instantly.
           </p>
           <div className="grid grid-cols-3 gap-4 max-w-md pt-4">
-            {[["12+", "Modules"], ["RBAC", "First-class"], ["Realtime", "Insights"]].map(([v, l]) => (
+            {[
+              ["12+", "Modules"],
+              ["RBAC", "First-class"],
+              ["Realtime", "Insights"],
+            ].map(([v, l]) => (
               <div key={l} className="border-l-2 border-white/30 pl-3">
                 <div className="font-display text-2xl font-semibold">{v}</div>
                 <div className="text-xs uppercase tracking-wider opacity-80">{l}</div>
@@ -111,17 +119,38 @@ export function SignupPage() {
           <form className="mt-6 space-y-4" onSubmit={onSubmit}>
             <div className="space-y-1.5">
               <Label htmlFor="fullName">Full Name</Label>
-              <Input id="fullName" type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder="Jane Doe" required />
+              <Input
+                id="fullName"
+                type="text"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                placeholder="Jane Doe"
+                required
+              />
             </div>
 
             <div className="space-y-1.5">
               <Label htmlFor="email">Work Email</Label>
-              <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="jane.doe@codevertex.io" required />
+              <Input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="jane.doe@codevertex.io"
+                required
+              />
             </div>
 
             <div className="space-y-1.5">
               <Label htmlFor="password">Password</Label>
-              <Input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="••••••••" required />
+              <Input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="••••••••"
+                required
+              />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
@@ -160,10 +189,21 @@ export function SignupPage() {
 
             <div className="space-y-1.5">
               <Label htmlFor="designation">Designation</Label>
-              <Input id="designation" type="text" value={designation} onChange={(e) => setDesignation(e.target.value)} placeholder="Software Engineer" required />
+              <Input
+                id="designation"
+                type="text"
+                value={designation}
+                onChange={(e) => setDesignation(e.target.value)}
+                placeholder="Software Engineer"
+                required
+              />
             </div>
 
-            <Button type="submit" className="w-full gradient-primary text-primary-foreground hover:opacity-95 shadow-glow h-10 mt-2" disabled={loading}>
+            <Button
+              type="submit"
+              className="w-full gradient-primary text-primary-foreground hover:opacity-95 shadow-glow h-10 mt-2"
+              disabled={loading}
+            >
               {loading ? <Loader2 className="size-4 animate-spin" /> : "Register Account"}
             </Button>
 
