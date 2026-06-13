@@ -28,6 +28,21 @@ const envSchema = z.object({
     .default("09:15"),
 });
 
-export const config = envSchema.parse(process.env);
+let parsedEnv;
+try {
+  parsedEnv = envSchema.parse(process.env);
+} catch (error) {
+  if (error instanceof z.ZodError) {
+    console.error("❌ Invalid or missing environment variables:");
+    for (const issue of error.issues) {
+      console.error(`   - ${issue.path.join(".")}: ${issue.message}`);
+    }
+  } else {
+    console.error("❌ Failed to parse environment variables:", error);
+  }
+  process.exit(1);
+}
+
+export const config = parsedEnv;
 
 export const isProduction = config.NODE_ENV === "production";

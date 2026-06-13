@@ -23,7 +23,34 @@ export function createApp() {
   const app = express();
 
   app.use(helmet());
-  app.use(cors({ origin: config.CORS_ORIGIN, credentials: true }));
+  const allowedOrigins = config.CORS_ORIGIN.split(",").map((o) => o.trim());
+
+  app.use(
+    cors({
+      origin: (origin, callback) => {
+        if (!origin) {
+          return callback(null, true);
+        }
+
+        const isAllowed = allowedOrigins.some((allowed) => {
+          if (allowed === "*") return true;
+          if (allowed === origin) return true;
+          // Match wildcard subdomains (e.g. *.vercel.app matching https://foo.vercel.app)
+          if (allowed.startsWith("*.") && origin.endsWith(allowed.slice(1))) {
+            return true;
+          }
+          return false;
+        });
+
+        if (isAllowed) {
+          callback(null, true);
+        } else {
+          callback(new Error(`Origin ${origin} not allowed by CORS`));
+        }
+      },
+      credentials: true,
+    }),
+  );
   app.use(
     rateLimit({
       windowMs: 15 * 60 * 1000,
